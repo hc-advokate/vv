@@ -42,7 +42,7 @@ import "swiper/scss/autoplay";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 
-import "./assets/styles/fonts.scss";
+// import "./assets/styles/fonts.scss";
 import "./assets/styles/index.scss";
 
 app.mount("#app");
