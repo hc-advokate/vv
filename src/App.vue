@@ -22,6 +22,4 @@
 	});
 </script>
 
-<style scoped lang="scss">
-	//@use "@/assets/styles/index.scss";
-</style>
+<style scoped lang="scss"></style>
