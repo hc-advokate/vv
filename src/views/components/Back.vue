@@ -1,70 +1,54 @@
 <script setup>
-	import Constants from "@/plugins/constants";
+	import Constants from "@/plugins/constants/index.js";
 
-	const props = defineProps({
-		title: {
-			type: String,
-			default: "",
-		},
-		url: {
-			type: String,
-			default: "",
-		},
-	});
-
-	const router = useRouter();
-	const onToBack = () => {
-		if (props.url) {
-			router.push({ path: props.url });
-		} else {
-			window.history.back();
-		}
+	// 返回上一级
+	const goBack = () => {
+		window.history.go(-1);
 	};
 </script>
 
 <template>
-	<div class="re-w-full main-header">
-		<div
-			class="main-back re-flex-row-center-ai"
-			@click="onToBack">
-			<img
-				:src="Constants.ico.left"
-				alt=""
-				class="ico-back" />
-			BACK
+	<section class="back">
+		<div class="b-space"></div>
+		<div class="b-container main-width">
+			<img class="b-ico re-t-cp" :src="Constants.ico.back" alt="" @click="goBack" />
+			<div class="b-body">
+				<slot></slot>
+			</div>
 		</div>
-		<div class="re-w-full re-h-full re-flex-row-center cc-title">
-			{{ props.title }}
-		</div>
-	</div>
+	</section>
 </template>
 
-<style scoped lang="scss">
-	.main-header {
+<style lang="scss" scoped>
+	.back {
 		width: 100%;
-		height: 50px;
-		position: relative;
-		.ico-back {
-			width: 9px;
-			height: 18px;
-			margin-right: 7px;
-		}
-		.main-back {
-			background-color: transparent;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: auto;
-			height: 100%;
-			font-family: Barlow-Regular, Barlow;
-			font-weight: 400;
-			font-size: 17px;
-			color: #000000;
-			line-height: 1;
-			text-align: left;
-			font-style: normal;
-		}
 	}
-	@media screen and (max-width: 768px) {
+	.b-space {
+		width: 100%;
+		height: 55px;
+		background: transparent;
+	}
+	.b-container {
+		background: rgba(36, 37, 43, 1);
+		width: 100%;
+		height: 55px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		.b-ico {
+			width: 8px;
+			height: 14px;
+			cursor: pointer;
+		}
+		.b-body {
+			width: 100%;
+			padding-left: 9px;
+		}
 	}
 </style>

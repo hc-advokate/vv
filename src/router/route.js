@@ -102,6 +102,92 @@ export const baseRoutes = [
 				},
 				children: [],
 			},
+			{
+				path: "/games",
+				name: "Games",
+				component: () => import("@/views/game/Index.vue"),
+				meta: {
+					auth: true,
+					isHide: false,
+					title: "Games",
+					name: "Games",
+				},
+				children: [],
+			},
+			{
+				path: "/sports",
+				name: "Sports",
+				component: () => import("@/views/sport/Index.vue"),
+				meta: {
+					auth: true,
+					isHide: false,
+					title: "Sports",
+					name: "Sports",
+				},
+				children: [],
+			},
+			{
+				path: "/predict",
+				name: "Predict",
+				component: () => import("@/views/predict/Index.vue"),
+				meta: {
+					auth: true,
+					isHide: false,
+					title: "Predict",
+					name: "Predict",
+				},
+				children: [],
+			},
+			{
+				path: "/account",
+				name: "Account",
+				component: () => import("@/views/account/Index.vue"),
+				meta: {
+					auth: true,
+					isHide: false,
+					title: "Account",
+					name: "Account",
+				},
+				children: [],
+			},
+		],
+	},
+	{
+		path: "/detail",
+		name: "DetailFrame",
+		component: () => import("@/views/Detail.vue"),
+		meta: {
+			auth: true,
+			isHide: false,
+			title: "DetailFrame",
+			name: "DetailFrame",
+		},
+		redirect: () => {
+			return { path: "" };
+		},
+		children: [
+			{
+				path: "/game-detail",
+				name: "GameDetail",
+				component: () => import("@/views/gameDetail/Detail.vue"),
+				meta: {
+					auth: false,
+					isHide: false,
+					title: "GameDetail",
+					name: "GameDetail",
+				},
+			},
+			{
+				path: "/sport-detail",
+				name: "SportDetail",
+				component: () => import("@/views/sport/Detail.vue"),
+				meta: {
+					auth: false,
+					isHide: false,
+					title: "SportDetail",
+					name: "SportDetail",
+				},
+			},
 		],
 	},
 	{

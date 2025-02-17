@@ -5,6 +5,11 @@
   src: url("@/assets/fonts/Arial.ttf") format("truetype");
 }
 @font-face {
+  font-family: Arial-Bold;
+  font-display: optional;
+  src: url("@/assets/fonts/Arial-Bold.ttf") format("truetype");
+}
+@font-face {
   font-family: Barlow;
   font-display: optional;
   src: url("@/assets/fonts/Barlow-Regular.ttf") format("truetype");
@@ -52,4 +57,12 @@
 @font-face {
   font-family: Mukta-Regular;
   src: url("@/assets/fonts/Mukta-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: UniversLT;
+  src: url("@/assets/fonts/Univers LT 47 Condensed Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: UniversLT-Bold;
+  src: url("@/assets/fonts/Univers LT 67 Condensed Bold.ttf") format("truetype");
 }

@@ -1,0 +1,75 @@
+// PC M 展示隐藏 768px
+.vis-pc {
+  display: block;
+}
+.vis-m {
+  display: none;
+}
+.vis-pcf {
+  display: flex;
+}
+.vis-mf {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .vis-pc {
+    display: none;
+  }
+  .vis-m {
+    display: block;
+  }
+  .vis-pcf {
+    display: none;
+  }
+  .vis-mf {
+    display: flex;
+  }
+}
+
+// 隐藏滚动条，但保留功能
+/* 适用于所有现代浏览器 */
+.hidden-scrollbar {
+  overflow: auto; /* 仍然允许滚动 */
+  scrollbar-width: none; /* Firefox 隐藏滚动条 */
+  -ms-overflow-style: none; /* IE 和 Edge 隐藏滚动条 */
+}
+
+/* 隐藏滚动条 - 针对 Webkit (Chrome, Safari) */
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* 隐藏滚动条 */
+}
+.hide-scroll-horizontal {
+  overflow-x: hidden;
+  overflow-y: auto; /* 允许垂直滚动 */
+}
+.hide-scroll-vertical {
+  overflow-y: hidden;
+  overflow-x: auto; /* 允许水平滚动 */
+}
+
+.all-bpd {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.all-mt {
+  margin-top: 10px;
+}
+
+// 卡片
+.all-card {
+  width: 100%;
+  background: #24252B;
+  border-radius: 10px;
+  padding: 10px;
+}
+.all-card_no {
+  width: 100%;
+  background: #24252B;
+  border-radius: 10px;
+}
+.all-card_bd {
+  width: 100%;
+  background: transparent;
+  border-radius: 10px;
+  border: 0.1px solid rgba(255, 255, 255, 0.5);
+}

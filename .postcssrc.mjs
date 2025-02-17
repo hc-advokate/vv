@@ -1,4 +1,5 @@
 // https://postcss.org/
+// 375 设计 PC / 3
 export default {
 	plugins: {
 		autoprefixer: {
@@ -10,7 +11,7 @@ export default {
 			rootValue: 37.5,
 			unitPrecision: 5,
 			propList: ["*"],
-			selectorBlackList: ["ignore"],
+			selectorBlackList: ["ignore", "van-"],
 			replace: true,
 			mediaQuery: false,
 			minPixelValue: 0,

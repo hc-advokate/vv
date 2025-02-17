@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+	import { onMounted, nextTick } from "vue";
 	import WOW from "wow.js";
 
 	onMounted(() => {

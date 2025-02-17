@@ -1,101 +1,84 @@
 <script setup>
-	import Constants from "@/plugins/constants/index.js";
-	import Util from "@/plugins/utils/index.js";
-
-	let data = reactive({
-		isScrolling: false,
-		userIco: "",
-	});
-
-	const router = useRouter();
-	const onToIndex = () => {
-		router.push({ path: "/" });
-	};
+	import Constants from "@/plugins/constants";
+	let router = useRouter();
 	const onToHome = () => {
-		router.push({ path: "/admin" });
+		router.push({ path: "/home" });
 	};
-	const onToLogin = () => {
-		router.push({ path: "/login" });
-	};
-	const onToRegister = () => {
-		router.push({ path: "/register" });
-	};
-	const onLogout = () => {
-		Util.logout();
-		onToHome();
-	};
-
-	onMounted(() => {
-		window.addEventListener("scroll", (e) => {
-			data.isScrolling = !!e.target.scrollingElement.scrollTop;
-		});
-		if (Util.isLogin()) {
-			data.userIco = window.localStorage.getItem("userIco");
-		}
-	});
 </script>
 
 <template>
-	<section id="header" class="header-body header-main re-w-full cci-plr re-flex-row-between" :class="{ 'h-border': data.isScrolling }">
-		<img :src="Constants.img.logo" alt="" class="com-logo re-t-cp" @click="onToIndex" />
-		<div class="re-flex-row-center">
-			<button class="re-t-cp cci-btn_txt" @click="onToLogin" v-if="false">Sign In</button>
-			<button class="re-t-cp cci-btn" @click="onToRegister" v-if="false">Sign Up</button>
-			<div class="re-t-cp re-flex-row-center btn-logout" @click="onLogout" v-if="Util.isLogin()">
-				<img :src="Constants.ico[data.userIco]" alt="" class="ico-user" />
-				Uncounect
+	<section class="header">
+		<div class="h-space"> </div>
+		<div class="h-container main-width">
+			<img class="h-logo" :src="Constants.logo" alt="" @click="onToHome" />
+			<div class="h-btns">
+				<button class="h-btn h-btn_ico">
+					<img class="btn-ico" :src="Constants.ico.coin" alt="" />
+					3689
+				</button>
+				<button class="h-btn">CONNECTED</button>
 			</div>
-			<button class="re-t-cp cci-btn_auto" @click="onToLogin" v-else>Connect Wallet</button>
 		</div>
 	</section>
 </template>
 
 <style scoped lang="scss">
-	.header-main {
-		height: 22px;
+	.header {
+		width: 100%;
 	}
-	.header-body {
-		height: 22px;
-		background: #ffffff;
-		transition: 0.2s;
-		position: sticky;
-		z-index: 10;
+	.h-space {
+		width: 100%;
+		height: 45px;
+		background: transparent;
+	}
+	.h-container {
+		background: #0c0d13;
+		width: 100%;
+		height: 45px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 99;
 		top: 0;
-		box-sizing: border-box;
-	}
-	.h-border {
-		border-width: 0px 0px thin;
-		border-style: solid;
-		border-color: rgb(220, 221, 224);
-	}
-
-	@media screen and (max-width: 768px) {
-		.header-main {
-			height: 49px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		.h-logo {
+			width: 101px;
+			height: 25px;
+			cursor: pointer;
 		}
-		.header-body {
-			height: 49px;
+		.h-btns {
+			display: flex;
+			align-items: center;
 		}
-		.com-logo {
-			width: 107px;
-			height: 23px;
+		.h-btn {
+			margin-left: 5px;
+			height: 100%;
+			background: #6a39ff;
+			border-radius: 14px;
+			padding: 5px 12px 6px;
+			font-family: Barlow-Regular, Barlow;
+			font-weight: 400;
+			font-size: 12px;
+			color: #ffffff;
+			line-height: 1;
+			text-align: center;
+			font-style: normal;
+			position: relative;
 		}
-	}
-
-	.ico-user {
-		width: 9px;
-		height: 9px;
-		margin-right: 2px;
-		border-radius: 50%;
-		display: inline-block;
-		transition: all 0.5s;
-	}
-	@media screen and (max-width: 768px) {
-		.ico-user {
-			width: 22px;
-			height: 22px;
-			margin-right: 4px;
-			transition: all 0.5s;
+		.h-btn_ico {
+			padding-left: 30px;
+			.btn-ico {
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 50%;
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 </style>

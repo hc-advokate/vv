@@ -1,227 +1,391 @@
 import Logo from "@/assets/images/logo.png";
-import LogoIco from "@/assets/images/logo_ico.png";
-import BgRegister from "@/assets/images/register-bg.mp4";
 
-import Left from "@/assets/images/icon/left.png";
-import MenuHome from "@/assets/images/icon/menu-home.png";
-import MenuHomeAct from "@/assets/images/icon/menu-home_active.png";
-import MenuInvest from "@/assets/images/icon/menu-invest.png";
-import MenuInvestAct from "@/assets/images/icon/menu-invest_active.png";
-import MenuMy from "@/assets/images/icon/menu-my.png";
-import MenuMyAct from "@/assets/images/icon/menu-my_active.png";
-import MenuWallet from "@/assets/images/icon/menu-wallet.png";
-import MenuWalletAct from "@/assets/images/icon/menu-wallet_active.png";
-import TkIn from "@/assets/images/icon/tk-in.png";
-import TkX from "@/assets/images/icon/tk-x.png";
+import IcoCoin from "@/assets/icon/coin.png";
+import IcoBack from "@/assets/icon/back.png";
+import IcoCollect from "@/assets/icon/collection.png";
+import IcoCollectBd from "@/assets/icon/collection-bd.png";
+import IcoChart from "@/assets/icon/chart.png";
+import IcoFootball from "@/assets/icon/football.png";
+import IcoUp from "@/assets/icon/up.png";
+import IcoSearch from "@/assets/icon/search.png";
 
-import ArtBig01 from "@/assets/images/article/art-big-01.png";
-import ArtBig02 from "@/assets/images/article/art-big-02.png";
-import ArtBig03 from "@/assets/images/article/art-big-03.png";
-import ArtBig04 from "@/assets/images/article/art-big-04.png";
-import ArtBig05 from "@/assets/images/article/art-big-05.png";
-import ArtBig06 from "@/assets/images/article/art-big-06.png";
-import Art01 from "@/assets/images/article/art-01.png";
-import Art02 from "@/assets/images/article/art-02.png";
-import Art03 from "@/assets/images/article/art-03.png";
-import Art04 from "@/assets/images/article/art-04.png";
-import Art05 from "@/assets/images/article/art-05.png";
-import Art06 from "@/assets/images/article/art-06.png";
-import Art07 from "@/assets/images/article/art-07.png";
-import Art08 from "@/assets/images/article/art-08.png";
-import Art09 from "@/assets/images/article/art-09.png";
-import Art10 from "@/assets/images/article/art-10.png";
-import Art11 from "@/assets/images/article/art-11.png";
-import Art12 from "@/assets/images/article/art-12.png";
-import Art13 from "@/assets/images/article/art-13.png";
-import Art14 from "@/assets/images/article/art-14.png";
-import Art15 from "@/assets/images/article/art-15.png";
-import Art16 from "@/assets/images/article/art-16.png";
-import Art17 from "@/assets/images/article/art-17.png";
-import TeamLogo01 from "@/assets/images/team/logo-01.png";
-import TeamLogo02 from "@/assets/images/team/logo-02.png";
-import TeamLogo03 from "@/assets/images/team/logo-03.png";
-import TeamLogo04 from "@/assets/images/team/logo-04.png";
-import TeamLogo05 from "@/assets/images/team/logo-05.png";
-import TeamLogo06 from "@/assets/images/team/logo-06.png";
-import TeamLogo07 from "@/assets/images/team/logo-07.png";
-import TeamLogo08 from "@/assets/images/team/logo-08.png";
-import TeamLogo09 from "@/assets/images/team/logo-09.png";
-import TeamLogo10 from "@/assets/images/team/logo-10.png";
-import TeamLogo11 from "@/assets/images/team/logo-11.png";
-import TeamLogo12 from "@/assets/images/team/logo-12.png";
-import TeamLogo13 from "@/assets/images/team/logo-13.png";
-import TeamLogo14 from "@/assets/images/team/logo-14.png";
-import TeamLogo15 from "@/assets/images/team/logo-15.png";
-import TeamLogo16 from "@/assets/images/team/logo-16.png";
-import JoinImg from "@/assets/images/article/join-img.png";
-import Blog01 from "@/assets/images/blog/blog-01.png";
-import Blog02 from "@/assets/images/blog/blog-02.png";
-import Blog03 from "@/assets/images/blog/blog-03.png";
-import Blog04 from "@/assets/images/blog/blog-04.png";
-import Blog05 from "@/assets/images/blog/blog-05.png";
-import Blog06 from "@/assets/images/blog/blog-06.png";
-import Blog07 from "@/assets/images/blog/blog-07.png";
+import Like from "@/assets/icon/like.png";
+import UnLike from "@/assets/icon/unlike.png";
+import Share from "@/assets/icon/share.png";
+import Report from "@/assets/icon/report.png";
 
-import ProductImg01 from "@/assets/images/home/ls-usdg.png";
-import ProductImg02 from "@/assets/images/home/ls-satori.png";
-import ProductImg03 from "@/assets/images/home/ls-ltp.png";
-import ProductImg04 from "@/assets/images/home/ls-smart.png";
-import ProductImg05 from "@/assets/images/home/ls-meme.png";
-import ProductImg06 from "@/assets/images/home/ls-psp.png";
-import ProductImg07 from "@/assets/images/home/ls-ep.png";
-import ProductImg08 from "@/assets/images/home/ls-icon-usdg.png";
-import ProductImg09 from "@/assets/images/home/ls-icon-sf.png";
-import ProductImg10 from "@/assets/images/home/ls-icon-mf.png";
-import ProductImg11 from "@/assets/images/home/ls-icon-psp.png";
-import ProductImg12 from "@/assets/images/home/ls-chain-01.png";
-import ProductImg13 from "@/assets/images/home/ls-chain-02.png";
-import ProductImg14 from "@/assets/images/home/ls-chain-03.png";
+import IcoFriend from "@/assets/icon/friend.png";
+import IcoEyeOpen from "@/assets/icon/eye-open.png";
+import IcoEyeClose from "@/assets/icon/eye-close.png";
+import IcoCopy from "@/assets/icon/copy.png";
+import IcoRefresh from "@/assets/icon/refresh.png";
+import IcoTran from "@/assets/icon/tran.png";
+import IcoDgx from "@/assets/icon/dgx.png";
+import IcoEth from "@/assets/icon/eth.png";
+import IcoSol from "@/assets/icon/sol.png";
+import IcoUsdt from "@/assets/icon/usdt.png";
 
-import TableWhiteIcon01 from "@/assets/images/detail/tableWhite-icon-01.png";
-import TableWhiteIcon02 from "@/assets/images/detail/tableWhite-icon-02.png";
-import TableWhiteIcon03 from "@/assets/images/detail/tableWhite-icon-03.png";
-import TableWhiteIcon04 from "@/assets/images/detail/tableWhite-icon-04.png";
-import TableWhiteIcon05 from "@/assets/images/detail/tableWhite-icon-05.png";
-import TableWhiteIcon06 from "@/assets/images/detail/tableWhite-icon-06.png";
-import TableWhiteIcon07 from "@/assets/images/detail/tableWhite-icon-07.png";
-import TableWhiteIcon08 from "@/assets/images/detail/tableWhite-icon-08.png";
-import TableWhiteIconR from "@/assets/images/detail/tableWhite-iconR.png";
+import BarAccount from "@/assets/bar/account.png";
+import BarCasino from "@/assets/bar/casino.png";
+import BarEsports from "@/assets/bar/esports.png";
+import BarGames from "@/assets/bar/games.png";
+import BarPredict from "@/assets/bar/predict.png";
+import BarSports from "@/assets/bar/sports.png";
 
-import ChartImg01 from "@/assets/images/detail/chart-img01.png";
-import ChartImg02 from "@/assets/images/detail/chart-img02.png";
-import ChartLogo01 from "@/assets/images/detail/chart-logo-01.png";
-import ChartLogo02 from "@/assets/images/detail/chart-logo-02.png";
-import ChartLogo03 from "@/assets/images/detail/chart-logo-03.png";
-
-import InfoImg01 from "@/assets/images/detail/info-img01.png";
-import InfoImg02 from "@/assets/images/detail/info-img02.png";
-import InfoImg03 from "@/assets/images/detail/info-img03.png";
-import InfoLogo01 from "@/assets/images/detail/info-logo-01.png";
-
-import IcoMenu from "@/assets/images/home/menu.png";
-
-import BtnMm from "@/assets/images/icon/btn_mm.png";
-import BtnMw from "@/assets/images/icon/btn_mw.png";
-import BtnPt from "@/assets/images/icon/btn_pt.png";
-import BtnSf from "@/assets/images/icon/btn_sf.png";
-import BtnSt from "@/assets/images/icon/btn_st.png";
+import NewGamesImg16 from "@/assets/games/new-games16.png";
+import NewGamesImg15 from "@/assets/games/new-games15.png";
+import NewGamesImg06 from "@/assets/games/new-games06.png";
+import NewGamesImg07 from "@/assets/games/new-games07.png";
+import NewGamesImg08 from "@/assets/games/new-games08.png";
+import NewGamesImg05 from "@/assets/games/new-games05.png";
+import NewGamesImg04 from "@/assets/games/new-games04.png";
+import NewGamesImg01 from "@/assets/games/new-games01.png";
+import NewGamesImg03 from "@/assets/games/new-games03.png";
+import NewGamesImg02 from "@/assets/games/new-games02.png";
 
 export default {
-	img: {
-		logo: Logo,
-		logoIco: LogoIco,
-	},
-	menu: {
-		home: MenuHome,
-		homeAct: MenuHomeAct,
-		invest: MenuInvest,
-		investAct: MenuInvestAct,
-		my: MenuMy,
-		myAct: MenuMyAct,
-		wallet: MenuWallet,
-		walletAct: MenuWalletAct,
-	},
+	logo: Logo,
 	ico: {
-		left: Left,
-		tkIn: TkIn,
-		tkX: TkX,
-		menu: IcoMenu,
-		btnMm: BtnMm,
-		btnMw: BtnMw,
-		btnPt: BtnPt,
-		btnSf: BtnSf,
-		btnSt: BtnSt,
+		coin: IcoCoin,
+		back: IcoBack,
+		collect: IcoCollect,
+		collectBd: IcoCollectBd,
+		chart: IcoChart,
+		football: IcoFootball,
+		up: IcoUp,
+		like: Like,
+		unLike: UnLike,
+		share: Share,
+		report: Report,
+		friend: IcoFriend,
+		eyeOpen: IcoEyeOpen,
+		eyeClose: IcoEyeClose,
+		copy: IcoCopy,
+		refresh: IcoRefresh,
+		tran: IcoTran,
+		dgx: IcoDgx,
+		eth: IcoEth,
+		sol: IcoSol,
+		usdt: IcoUsdt,
+		search: IcoSearch,
 	},
-	article: {
-		artBig01: ArtBig01,
-		artBig02: ArtBig02,
-		artBig03: ArtBig03,
-		artBig04: ArtBig04,
-		artBig05: ArtBig05,
-		artBig06: ArtBig06,
-		art01: Art01,
-		art02: Art02,
-		art03: Art03,
-		art04: Art04,
-		art05: Art05,
-		art06: Art06,
-		art07: Art07,
-		art08: Art08,
-		art09: Art09,
-		art10: Art10,
-		art11: Art11,
-		art12: Art12,
-		art13: Art13,
-		art14: Art14,
-		art15: Art15,
-		art16: Art16,
-		art17: Art17,
-		joinImg: JoinImg,
+	bar: {
+		casino: BarCasino,
+		account: BarAccount,
+		esports: BarEsports,
+		games: BarGames,
+		predict: BarPredict,
+		sports: BarSports,
 	},
-	team: {
-		teamLogo01: TeamLogo01,
-		teamLogo02: TeamLogo02,
-		teamLogo03: TeamLogo03,
-		teamLogo04: TeamLogo04,
-		teamLogo05: TeamLogo05,
-		teamLogo06: TeamLogo06,
-		teamLogo07: TeamLogo07,
-		teamLogo08: TeamLogo08,
-		teamLogo09: TeamLogo09,
-		teamLogo10: TeamLogo10,
-		teamLogo11: TeamLogo11,
-		teamLogo12: TeamLogo12,
-		teamLogo13: TeamLogo13,
-		teamLogo14: TeamLogo14,
-		teamLogo15: TeamLogo15,
-		teamLogo16: TeamLogo16,
-	},
-	blog: {
-		blog01: Blog01,
-		blog02: Blog02,
-		blog03: Blog03,
-		blog04: Blog04,
-		blog05: Blog05,
-		blog06: Blog06,
-		blog07: Blog07,
-	},
-	detail: {
-		tableWhiteIcon01: TableWhiteIcon01,
-		tableWhiteIcon02: TableWhiteIcon02,
-		tableWhiteIcon03: TableWhiteIcon03,
-		tableWhiteIcon04: TableWhiteIcon04,
-		tableWhiteIcon05: TableWhiteIcon05,
-		tableWhiteIcon06: TableWhiteIcon06,
-		tableWhiteIcon07: TableWhiteIcon07,
-		tableWhiteIcon08: TableWhiteIcon08,
-		tableWhiteIconR: TableWhiteIconR,
-		chartImg01: ChartImg01,
-		chartImg02: ChartImg02,
-		chartLogo01: ChartLogo01,
-		chartLogo02: ChartLogo02,
-		chartLogo03: ChartLogo03,
-		infoImg01: InfoImg01,
-		infoImg02: InfoImg02,
-		infoImg03: InfoImg03,
-		infoLogo01: InfoLogo01,
-	},
-	home: {
-		productImg01: ProductImg01,
-		productImg02: ProductImg02,
-		productImg03: ProductImg03,
-		productImg04: ProductImg04,
-		productImg05: ProductImg05,
-		productImg06: ProductImg06,
-		productImg07: ProductImg07,
-		productImg08: ProductImg08,
-		productImg09: ProductImg09,
-		productImg10: ProductImg10,
-		productImg11: ProductImg11,
-		productImg12: ProductImg12,
-		productImg13: ProductImg13,
-		productImg14: ProductImg14,
-	},
-	video: {
-		bgRegister: BgRegister,
-	},
+	gameToken1: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0NjAxMTk3ODU1MTcwODg3NjgiLCJlbWFpbCI6IjcxNDcyMTdAMTYzLmNvbSIsInBob25lIjoiMTg2LTE4MjExMDIxOTAyIiwiaWF0IjoxNzM4ODI3MzU2LCJleHAiOjE3NDE0MTkzNTZ9.z59114J50K1P6xAmgvVUFJy-55qZi94ZQV-TNBYH9oA",
+	casinoTop: [
+		{
+			id: 2,
+			img: NewGamesImg16,
+			title: "Slot Machine",
+			key: "SlotMachine",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: `true`,
+			isLike: false,
+			love: 36,
+			view: "36",
+		},
+	],
+	casinoHot: [
+		{
+			id: 3,
+			img: NewGamesImg15,
+			title: "Dice",
+			key: "Dice",
+			desc: "looticrous",
+			view: "1238",
+			love: "560",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 4,
+			img: NewGamesImg06,
+			title: "Mines",
+			key: "Mines",
+			desc: "looticrous",
+			view: "983",
+			love: "306",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 5,
+			img: NewGamesImg07,
+			title: "Dreamcatcher",
+			key: "Dreamcatcher",
+			desc: "lucasneryoficial",
+			view: "480",
+			love: "11",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 6,
+			img: NewGamesImg08,
+			title: "Jujuraider",
+			key: "Jujuraider",
+			desc: "lucasneryoficial",
+			view: "480",
+			love: "11",
+			url: `true`,
+			isLike: false,
+		},
+	],
+	gamesTop: [
+		{
+			id: 7,
+			img: NewGamesImg05,
+			title: "Cloud Chaser",
+			key: "SlotMachine",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: `true`,
+			isLike: false,
+			love: 36,
+			view: "36",
+		},
+	],
+	gamesHot: [
+		{
+			id: 8,
+			img: NewGamesImg01,
+			title: "Dreamcatcher",
+			key: "Dreamcatcher",
+			desc: "lucasneryoficial",
+			view: "1238",
+			love: "560",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 9,
+			img: NewGamesImg04,
+			title: "Gemfruit",
+			key: "Gemfruit",
+			desc: "lucasneryoficial",
+			view: "983",
+			love: "306",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 10,
+			img: NewGamesImg03,
+			title: "Dreamcatcher",
+			key: "Dreamcatcher",
+			desc: "lucasneryoficial",
+			view: "480",
+			love: "11",
+			url: `true`,
+			isLike: false,
+		},
+		{
+			id: 11,
+			img: NewGamesImg02,
+			title: "Jujuraider",
+			key: "Jujuraider",
+			desc: "lucasneryoficial",
+			view: "480",
+			love: "11",
+			url: `true`,
+			isLike: false,
+		},
+	],
+	gameDetail: [
+		{
+			id: 2,
+			img: NewGamesImg16,
+			title: "Slot Machine",
+			titleSub: "XXXXXXX",
+			key: "SlotMachine",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: 'https://gamecenter.tokenation.fi/sgw/',
+			isLike: true,
+			love: 36,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 3,
+			img: NewGamesImg15,
+			title: "Dice",
+			titleSub: "XXXXXXX",
+			key: "Dice",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: false,
+			love: 10,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 4,
+			img: NewGamesImg06,
+			title: "Mines",
+			titleSub: "XXXXXXX",
+			key: "Mines",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: true,
+			love: 45,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 5,
+			img: NewGamesImg07,
+			title: "Dreamcatcher",
+			titleSub: "XXXXXXX",
+			key: "Dreamcatcher",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: 'https://gamecenter.tokenation.fi/bjw/',
+			isLike: false,
+			love: 0,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 6,
+			img: NewGamesImg08,
+			title: "Jujuraider",
+			titleSub: "XXXXXXX",
+			key: "Jujuraider",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: true,
+			love: 27,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 7,
+			img: NewGamesImg05,
+			title: "Cloud Chaser",
+			titleSub: "XXXXXXX",
+			key: "CloudChaser",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: true,
+			love: 67,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 8,
+			img: NewGamesImg01,
+			title: "Dreamcatcher",
+			titleSub: "XXXXXXX",
+			key: "Dreamcatcher",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: 'https://gamecenter.tokenation.fi/dcw/',
+			isLike: false,
+			love: 15,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 9,
+			img: NewGamesImg04,
+			title: "Gemfruit",
+			titleSub: "XXXXXXX",
+			key: "Gemfruit",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: 'https://gamecenter.tokenation.fi/ccw/',
+			isLike: true,
+			love: 32,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 10,
+			img: NewGamesImg03,
+			title: "Dreamcatcher",
+			titleSub: "XXXXXXX",
+			key: "Dreamcatcher",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: false,
+			love: 12,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+		{
+			id: 11,
+			img: NewGamesImg02,
+			title: "Jujuraider",
+			titleSub: "XXXXXXX",
+			key: "Jujuraider",
+			desc: "Slot Machine is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+			url: null,
+			isLike: true,
+			love: 57,
+			view: "36",
+			rating: "87 (18,910 votes)",
+			developer: "AM",
+			released: "May 2024",
+			technology: "HTML5",
+			platform: "Browser (desktop, mobile, tablet)",
+			classification: "Games»Casino»Slot Machine",
+			tags: ["XXXXXXX", "XXXX", "XXXXXXX", "XXXXXXXX"],
+		},
+	],
 };

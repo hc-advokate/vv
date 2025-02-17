@@ -11,7 +11,7 @@ app.use(Store);
 import mitt from "mitt";
 app.config.globalProperties.$mittBus = mitt();
 
-import "amfe-flexible";
+import "./plugins/rem.js";
 
 import * as directives from "@/plugins/directive/index.js";
 Object.keys(directives).forEach((key) => {
@@ -36,11 +36,8 @@ app.use(Vant);
 import "animate.css/animate.min.css";
 import "animate.css/animate.compat.css";
 
-// import "swiper/css";
-import "swiper/scss";
-import "swiper/scss/autoplay";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+import { register } from "swiper/element/bundle";
+register();
 
 import "./assets/styles/index.scss";
 
