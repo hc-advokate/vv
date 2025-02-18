@@ -3,7 +3,7 @@
     <div class="account-box-in">
       <div class="top-box">
         <span class="title">Portfolio Balance USDT</span>
-        <van-image class="friend-btn" fit="cover" :src="Constants.ico.friend" />
+        <van-image class="friend-btn" fit="cover" :src="Constants.ico.friend" @click="goFriend" />
       </div>
       <div class="info-box">
         <p class="amount ellipsis-one" :class="{'amount-hide' : !dataObj.isShowAmount}">{{ dataObj.isShowAmount ?  `${'$' + formatThousandDef(12791.29008990)}` : '******' }}</p>
@@ -16,21 +16,33 @@
       </div>
       <div class="btn-box">
         <van-button class="txt-btn" :class="{  'txt-btn-active' : dataObj.type === 1}" type="primary" @click="changeType(1)">Tokens</van-button>
-        <van-button class="txt-btn" :class="{  'txt-btn-active' : dataObj.type === 2}" type="primary">Bets</van-button>
-        <van-button class="round-btn" type="primary">
-          <van-image class="tool-btn" fit="cover" :src="Constants.ico.refresh" />
+        <van-button class="txt-btn" :class="{  'txt-btn-active' : dataObj.type === 2}" type="primary" @click="changeType(2)">Bets</van-button>
+        <van-button class="round-btn" type="primary" @click="goExchange">
+          <van-image class="tool-btn" fit="cover" :src="Constants.ico.exchange" />
         </van-button>
         <van-button class="round-btn" type="primary">
           <van-image class="tool-btn" fit="cover" :src="Constants.ico.tran" />
         </van-button>
       </div>
-<!--      <div class="content-box"></div>-->
+      <div class="content-box">
+        <div class="coin-box" v-for="(item, index) in coinList" :key="index">
+          <div class="coin-info">
+            <van-image class="coin-icon" fit="cover" :src="item.icon" />
+            <div>
+              <p class="coin-txt">{{ item.name }}</p>
+              <p class="coin-txt txt-desc">{{ item.desc }}</p>
+            </div>
+          </div>
+          <p class="coin-txt">{{ item.amount }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
   import { ref, onMounted } from "vue";
+  import { useRouter } from "vue-router";
   import Constants from "@/plugins/constants/index.js";
   import { formatThousandDef } from "@/plugins/utils/format.js";
   import useClipboard from "vue-clipboard3";
@@ -41,8 +53,45 @@
     isShowAmount: true,
   });
 
+  // mock coin list
+  const coinList = ref([
+    {
+      icon: Constants.ico.dgx,
+      name: 'DGX',
+      desc: 'DeGen X',
+      amount: '632.119',
+    },
+    {
+      icon: Constants.ico.eth,
+      name: 'ETH',
+      desc: 'Ethereum',
+      amount: '986.940',
+    },
+    {
+      icon: Constants.ico.sol,
+      name: 'SOL',
+      desc: 'Solana',
+      amount: '118.092',
+    },
+    {
+      icon: Constants.ico.usdt,
+      name: 'USDT',
+      desc: 'Tether',
+      amount: '234.940',
+    },
+  ]);
+
   const toggleAmount = () => {
     dataObj.isShowAmount = !dataObj.isShowAmount;
+  };
+
+  const router = useRouter();
+  const goFriend = () => {
+    router.push({ path: "/friends" });
+  };
+
+  const goExchange = () => {
+    router.push({ path: "/exchange" });
   };
 
   const address = ref("bvnv23sddsdffs");
@@ -189,7 +238,40 @@
         border-radius: 24px;
         margin-top: 19px;
         padding: 6px 20px;
-
+        .coin-box {
+          width: 100%;
+          padding: 13px 0;
+          border-bottom: 0.4px solid rgba(255,255,255,0.5);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .coin-info {
+            display: flex;
+            align-items: center;
+            .coin-icon {
+              width: 48px;
+              height: 48px;
+              margin-right: 8px;
+            }
+          }
+          .coin-txt {
+            font-family: Barlow-ExtraBold;
+            font-weight: 800;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 1;
+            font-style: normal;
+          }
+          .txt-desc {
+            font-family: Barlow-Regular;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+          }
+        }
+        .coin-box:last-child {
+          border-bottom: none;
+        }
       }
     }
   }

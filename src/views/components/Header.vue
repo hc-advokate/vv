@@ -1,8 +1,15 @@
 <script setup>
+	import { useRouter } from "vue-router";
 	import Constants from "@/plugins/constants";
 	let router = useRouter();
 	const onToHome = () => {
 		router.push({ path: "/home" });
+	};
+	const onToAccount = () => {
+		router.push({ path: "/account" });
+	};
+	const onToConnect = () => {
+		router.push({ path: "/connect" });
 	};
 </script>
 
@@ -12,11 +19,11 @@
 		<div class="h-container main-width">
 			<img class="h-logo" :src="Constants.logo" alt="" @click="onToHome" />
 			<div class="h-btns">
-				<button class="h-btn h-btn_ico">
+				<button class="h-btn h-btn_ico" @click="onToAccount">
 					<img class="btn-ico" :src="Constants.ico.coin" alt="" />
 					3689
 				</button>
-				<button class="h-btn">CONNECTED</button>
+				<button class="h-btn" @click="onToConnect">CONNECTED</button>
 			</div>
 		</div>
 	</section>

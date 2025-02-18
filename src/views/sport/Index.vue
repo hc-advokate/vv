@@ -57,7 +57,7 @@
 	<div class="all-bpd all-mt sport-list hidden-scrollbar">
 		<div class="all-card sport-item" v-for="(item, index) in 4" :key="index" @click="onToDetail(item)">
 			<div class="re-flex-row-between sport-time">
-				<div class="rel-flex-row">
+				<div class="re-flex-row-center-ai">
 					<img class="sport-ico" :src="Constants.ico.football" alt="" />
 					<span>Super Lig</span>
 				</div>

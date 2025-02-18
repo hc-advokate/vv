@@ -77,6 +77,43 @@
 						<p class="card-tb_small cf-box cf-box_bg">4.80</p>
 					</div>
 				</div>
+
+				<div class="all-card_bd td-card all-mt">
+					<h6 class="card-title">Match Result</h6>
+					<div class="card-tab-list">
+						<div class="card-tab-item" @click="onChangeTab(1)" :class="{ 'card-tab-item_active': data.tabIndex === 1 }">Regular Time</div>
+						<div class="card-tab-item" @click="onChangeTab(2)" :class="{ 'card-tab-item_active': data.tabIndex === 2 }">1st Half</div>
+						<div class="card-tab-item" @click="onChangeTab(3)" :class="{ 'card-tab-item_active': data.tabIndex === 3 }">2nd Half</div>
+					</div>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">Kasimpasa Istanbul</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">X</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">Eyupspor</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+				</div>
+
+				<div class="all-card_bd td-card all-mt">
+					<h6 class="card-title">2up - Instant Win</h6>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">Kasimpasa Istanbul</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">X</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+					<div class="re-flex-row-between card-info-item">
+						<span class="info-item-key">Eyupspor</span>
+						<span class="info-item-value">2.20</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -210,6 +247,18 @@
 			width: 12px;
 			height: 12px;
 		}
+		.card-title {
+			font-family: Barlow-Regular, Barlow;
+			font-weight: 400;
+			font-size: 12px;
+			color: #ffffff;
+			line-height: 1;
+			text-align: left;
+			font-style: normal;
+			padding: 5px 10px 7px;
+			background: #3f2d7f;
+			border-radius: 10px 10px 0px 0px;
+		}
 		.card-title-half {
 			width: 102px;
 			background: #6a39ff;
@@ -283,6 +332,54 @@
 				background: #0c0d13;
 				border-radius: 5px;
 				padding: 6px 10px;
+			}
+		}
+
+		.card-tab-list {
+			border-bottom: 0.1px solid rgba(255, 255, 255, 1);
+			white-space: nowrap;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			.card-tab-item {
+				display: inline-block;
+				font-family: Barlow-Regular, Barlow;
+				font-weight: 400;
+				font-size: 12px;
+				color: #ffffff;
+				line-height: 1;
+				text-align: center;
+				font-style: normal;
+				margin-left: 10px;
+				padding-left: 1px;
+				padding-right: 1px;
+				padding-bottom: 6px;
+				&.card-tab-item_active {
+					font-family: Barlow-Bold, Barlow;
+					font-weight: bold;
+					border-bottom: 3px solid rgba(106, 57, 255, 1);
+				}
+			}
+		}
+
+		.card-info-item {
+			border-bottom: 0.1px solid rgba(255, 255, 255, 1);
+			font-size: 12px;
+			color: #ffffff;
+			line-height: 1;
+			font-style: normal;
+			padding: 8px 10px;
+			&:last-child {
+				border-bottom: none;
+			}
+			.info-item-key {
+				font-family: Barlow-Regular, Barlow;
+				font-weight: 400;
+				text-align: left;
+			}
+			.info-item-value {
+				font-family: Barlow-Bold, Barlow;
+				font-weight: bold;
+				text-align: right;
 			}
 		}
 	}

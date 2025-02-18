@@ -1,5 +1,5 @@
 <template>
-  <GameDetailBack :title="lbListData[dataObj.index] && lbListData[dataObj.index].title"></GameDetailBack>
+  <BasicBack :title="lbListData[dataObj.index] && lbListData[dataObj.index].title"></BasicBack>
   <section class="hl-detail-box">
     <div class="hl-info-box">
       <div class="top-box">
@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-  import GameDetailBack from "@/views/components/GameDetailBack.vue";
+  import BasicBack from "@/views/components/BasicBack.vue";
   import { ref, reactive, onMounted } from "vue";
   import {useRoute} from "vue-router";
   import Constants from "@/plugins/constants/index.js";
@@ -106,8 +106,6 @@
     } else {
       dataObj.url = `${lbListData[dataObj.index].url}?t=${Math.random()}&token=${window.localStorage.getItem("tgToken")}`;
     }
-
-    console.log(dataObj.url);
   };
 
   const route = useRoute();

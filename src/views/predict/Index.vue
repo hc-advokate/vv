@@ -42,6 +42,32 @@
 			<span class="type-item re-t-cp" @click="onChangeType(5)" :class="{ 'type-item_active': data.selType === 5 }">Pop Culture</span>
 		</div>
 	</div>
+	<div class="all-bpd all-mt">
+		<div class="all-card_no game-list hide-scroll-horizontal">
+			<div class="game-pd game-title re-flex-row-center-ai">
+				<img class="game-img" src="@/assets/demo/predict.png" alt="" /> <span class="game-title_desc">What price will Bitcoin hit in November?</span>
+			</div>
+			<div class="game-pd game-item re-flex-row-between" v-for="item in 15" :key="item">
+				<div class="item-num">$ 1{{ item }}0,000</div>
+				<div class="re-flex-row-center-ai">
+					<span class="item-percentage">{{ item }}%</span>
+					<button class="item-btn item-btn_yes">Yes</button>
+					<button class="item-btn item-btn_no">No</button>
+				</div>
+			</div>
+			<div class="game-pd game-item_col re-flex-row-between">
+				<div class="item-num">$ 28.2m Vol.</div>
+				<div class="re-flex-row-center-ai">
+					<img class="game-ico" :src="Constants.ico.search" alt="" />
+					<div class="re-flex-row-center-ai item-num game-msg">
+						<img class="game-ico" :src="Constants.ico.search" alt="" />
+						<span class="game-rt">2,784</span>
+					</div>
+					<img class="game-ico game-col" :src="Constants.ico.collectBd" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -83,7 +109,6 @@
 			}
 		}
 	}
-
 	.sport-list {
 		white-space: nowrap;
 		overflow-x: scroll;
@@ -101,7 +126,6 @@
 			}
 		}
 	}
-
 	.search-form {
 		.search-ico {
 			width: 13px;
@@ -151,6 +175,105 @@
 				font-family: Barlow-Bold, Barlow;
 				font-weight: bold;
 				color: #ffffff;
+			}
+		}
+	}
+	.game-list {
+		position: relative;
+		padding-top: 14px;
+		max-height: calc(100vh - 420px);
+		.game-pd {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.game-title {
+			.game-img {
+				width: 38px;
+				height: 38px;
+			}
+			.game-title_desc {
+				font-family: Barlow, Barlow;
+				font-weight: 400;
+				font-size: 14px;
+				color: #ffffff;
+				line-height: 14px;
+				text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+				text-align: left;
+				font-style: normal;
+				margin-left: 10px;
+			}
+		}
+		.game-item {
+			margin-top: 14px;
+			.item-num {
+				font-family: Barlow-Regular, Barlow;
+				font-weight: 400;
+				font-size: 14px;
+				color: #ffffff;
+				line-height: 1;
+				text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+				text-align: left;
+				font-style: normal;
+			}
+			.item-percentage {
+				font-family: Barlow-Bold, Barlow;
+				font-weight: bold;
+				font-size: 14px;
+				color: #ffffff;
+				line-height: 14px;
+				text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+				text-align: right;
+				font-style: normal;
+			}
+			.item-btn {
+				padding: 5px 10px 6px;
+				border-radius: 12px;
+				margin-left: 7px;
+				font-family: Barlow-Bold, Barlow;
+				font-weight: bold;
+				font-size: 12px;
+				color: #ffffff;
+				line-height: 1;
+				text-align: left;
+				font-style: normal;
+			}
+			.item-btn_yes {
+				background: #70d33b;
+			}
+			.item-btn_no {
+				background: #ff2f2f;
+			}
+		}
+		.game-item_col {
+			width: 100%;
+			background: #3f2d7f;
+			border-radius: 0 0 10px 10px;
+			position: sticky;
+			bottom: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			.item-num {
+				font-family: Barlow-Regular, Barlow;
+				font-weight: 400;
+				font-size: 14px;
+				color: #ffffff;
+				line-height: 1;
+				text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+				text-align: left;
+				font-style: normal;
+			}
+			.game-ico {
+				width: 14px;
+				height: 14px;
+			}
+			.game-rt {
+				margin-left: 3px;
+			}
+			.game-msg {
+				margin-left: 15px;
+			}
+			.game-col {
+				margin-left: 7px;
 			}
 		}
 	}

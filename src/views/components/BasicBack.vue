@@ -3,6 +3,9 @@
     <div class="hl-game-back main-width">
       <van-image class="btn-back" fit="cover" :src="Constants.ico.back" @click="goBack" />
       <p class="back-title">{{ props.title }}</p>
+      <div v-if="showIcon" class="icon-btn">
+        <slot name="icon"></slot>
+      </div>
     </div>
   </section>
 </template>
@@ -15,6 +18,10 @@
       type: String,
       required: true,
     },
+    showIcon: {
+      type: Boolean,
+      default: false
+    }
   });
 
   // 返回上一级
@@ -53,6 +60,15 @@
       color: #FFFFFF;
       line-height: 56px;
       font-style: normal;
+    }
+
+    .icon-btn {
+      width: 29px;
+      height: 29px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 13px;
     }
   }
 }
