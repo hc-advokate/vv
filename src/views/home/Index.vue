@@ -3,7 +3,7 @@
     <van-image class="top-img" width="100%" height="100%" fit="cover" :src="item.img" />
     <div class="hl-top-info">
       <span class="top-title">{{ item.title }}</span>
-      <van-button class="play-btn" type="primary" color="#6A39FF" @click="goDetail(item.id)">PLAY NOW</van-button>
+      <van-button class="basic-purple-btn play-btn" type="primary" color="#6A39FF" @click="goDetail(item.id)">PLAY NOW</van-button>
     </div>
   </div>
 
@@ -68,12 +68,6 @@
         width: 108px;
         height: 24px;
         border-radius: 13px;
-        font-family: Barlow-Bold;
-        font-weight: bold;
-        font-size: 14px;
-        color: #FFFFFF;
-        line-height: 1 !important;
-        font-style: normal;
         margin-top: 10px;
       }
     }

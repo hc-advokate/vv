@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	import { reactive } from "vue";
 	import Constants from "@/plugins/constants";
+	import { useRouter } from "vue-router";
 
 	const data = reactive({
 		selType: 1,
@@ -8,6 +9,11 @@
 
 	const onChangeType = (type) => {
 		data.selType = type;
+	};
+
+	let router = useRouter();
+	const onToDetail = (item) => {
+		router.push({ path: "/predict-buy", query: { id: item } });
 	};
 </script>
 
@@ -51,8 +57,8 @@
 				<div class="item-num">$ 1{{ item }}0,000</div>
 				<div class="re-flex-row-center-ai">
 					<span class="item-percentage">{{ item }}%</span>
-					<button class="item-btn item-btn_yes">Yes</button>
-					<button class="item-btn item-btn_no">No</button>
+					<button class="item-btn item-btn_yes" @click="onToDetail(item)">Yes</button>
+					<button class="item-btn item-btn_no" @click="onToDetail(item)">No</button>
 				</div>
 			</div>
 			<div class="game-pd game-item_col re-flex-row-between">

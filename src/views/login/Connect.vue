@@ -84,21 +84,23 @@
 	};
 
 	const loginWallet = (address, type) => {
-		api.userApi
-			.loginWallet({
-				address: address,
-				type: type,
-			})
-			.then((res) => {
-				data.loading = true;
-				if (!res.code) {
-					window.localStorage.setItem("userToken", res.data.token);
-					onToHome();
-				}
-			})
-			.catch(() => {
-				data.loading = true;
-			});
+		console.log(address, type);
+		onToHome();
+		// api.userApi
+		// 	.loginWallet({
+		// 		address: address,
+		// 		type: type,
+		// 	})
+		// 	.then((res) => {
+		// 		data.loading = true;
+		// 		if (!res.code) {
+		// 			window.localStorage.setItem("userToken", res.data.token);
+		// 			onToHome();
+		// 		}
+		// 	})
+		// 	.catch(() => {
+		// 		data.loading = true;
+		// 	});
 	};
 
 	let router = useRouter();

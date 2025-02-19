@@ -211,6 +211,17 @@ export const baseRoutes = [
 				},
 			},
 			{
+				path: "/predict-buy",
+				name: "PredictBuy",
+				component: () => import("@/views/predict/Buy.vue"),
+				meta: {
+					auth: false,
+					isHide: false,
+					title: "PredictBuy",
+					name: "PredictBuy",
+				},
+			},
+			{
 				path: "/friends",
 				name: "Friends",
 				component: () => import("@/views/account/Friends.vue"),
@@ -243,6 +254,18 @@ export const baseRoutes = [
 					isHide: false,
 					title: "ExchangeDetail",
 					name: "ExchangeDetail",
+				},
+				children: [],
+			},
+			{
+				path: "/temp01",
+				name: "Temp01",
+				component: () => import("@/views/temp/Temp01.vue"),
+				meta: {
+					auth: false,
+					isHide: false,
+					title: "Temp01",
+					name: "Temp01",
 				},
 				children: [],
 			},

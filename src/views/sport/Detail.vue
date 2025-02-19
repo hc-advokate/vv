@@ -1,9 +1,11 @@
 <script setup lang="ts">
+	import { reactive } from "vue";
 	import Back from "@/views/components/Back.vue";
 	import Constants from "@/plugins/constants";
 
 	const data = reactive({
 		tabIndex: 1,
+		isSelect: false,
 	});
 
 	const onChangeTab = (index: number) => {
@@ -14,10 +16,17 @@
 <template>
 	<Back>
 		<div class="h-search re-flex-row-between">
-			<select class="hs-select">
-				<option>Super Lig</option>
-				<option>Super Lig</option>
-			</select>
+			<van-popover v-model:show="data.isSelect" class="select-container">
+				<div class="select-list">
+					<div class="select-item" @click="data.isSelect = false">Super Lig</div>
+				</div>
+				<template #reference>
+					<div class="re-flex-row-between select-box">
+						<span>Super Lig</span>
+						<van-icon name="arrow-down" class="select-ico" />
+					</div>
+				</template>
+			</van-popover>
 			<div class="re-flex-row-between hs-rel">
 				<span>0:0</span>
 				<img class="hs-rel_ico" :src="Constants.ico.chart" alt="" />
@@ -116,22 +125,36 @@
 				</div>
 			</div>
 		</div>
+		<!--		<van-popover v-model:show="data.isSelect" class="select-container select-container_btm">-->
+		<!--			<div class="select-list">-->
+		<!--				<div class="select-item">Buy</div>-->
+		<!--				<div class="select-item">Sell</div>-->
+		<!--				<van-popover v-model:show="data.isSelect" class="select-container select-container_left" placement="right">-->
+		<!--					<div class="select-list">-->
+		<!--						<div class="select-item">Merge</div>-->
+		<!--						<div class="select-item">Split</div>-->
+		<!--					</div>-->
+		<!--					<template #reference>-->
+		<!--						<div class="re-flex-row-between select-box select-mt">-->
+		<!--							<span>More</span>-->
+		<!--							<van-icon name="arrow" class="select-ico" />-->
+		<!--						</div>-->
+		<!--					</template>-->
+		<!--				</van-popover>-->
+		<!--			</div>-->
+		<!--			<template #reference>-->
+		<!--				<div class="re-flex-row-between select-box">-->
+		<!--					<span>Super Lig</span>-->
+		<!--					<van-icon name="arrow-down" class="select-ico" />-->
+		<!--				</div>-->
+		<!--			</template>-->
+		<!--		</van-popover>-->
 	</section>
 </template>
 
 <style scoped lang="scss">
 	.h-search {
 		width: 100%;
-		.hs-select {
-			background: transparent;
-			font-family: Arial-Bold, Arial;
-			font-weight: bold;
-			font-size: 12px;
-			color: #ffffff;
-			line-height: 1;
-			text-align: left;
-			font-style: normal;
-		}
 		.hs-rel {
 			width: 79px;
 			padding: 6px 11px;
@@ -380,6 +403,44 @@
 				font-family: Barlow-Bold, Barlow;
 				font-weight: bold;
 				text-align: right;
+			}
+		}
+	}
+
+	.select-box {
+		background: transparent;
+		font-family: Arial-Bold, Arial;
+		font-weight: bold;
+		font-size: 12px;
+		color: #ffffff;
+		line-height: 1;
+		text-align: left;
+		font-style: normal;
+		.select-ico {
+			margin-left: 4px;
+		}
+	}
+	.select-container {
+		.select-list {
+			background: #000000;
+			border-radius: 10px;
+			border: 0.1px solid #333333;
+			padding: 10px 9px 10px 19px;
+			font-family: Barlow-Regular, Barlow;
+			font-weight: 400;
+			font-size: 14px;
+			color: #ffffff;
+			line-height: 1;
+			text-align: left;
+			font-style: normal;
+			.select-mt {
+				margin-top: 14px;
+			}
+			.select-item {
+				margin-top: 14px;
+				&:first-child {
+					margin-top: 0;
+				}
 			}
 		}
 	}

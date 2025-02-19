@@ -64,6 +64,32 @@
   }
 }
 
+// field
+.hl-cell-group {
+  background: none;
+  margin: 0 !important;
+  .hl-field {
+    font-family: Barlow-Bold;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    font-style: normal;
+    padding: 0;
+  }
+}
+
+.basic-purple-btn {
+  height: auto;
+  font-family: Barlow-Bold;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 1;
+  font-style: normal;
+  background: #6A39FF;
+  border: none;
+}
+
 // 溢出一行省略号
 .ellipsis-one {
   display: -webkit-box;

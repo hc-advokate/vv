@@ -10,7 +10,7 @@
             <p class="coin-txt txt-amount">{{ formatThousandDef(item.amount) }}</p>
           </div>
         </div>
-        <van-button class="exchange-btn" type="primary" @click="goExchange(item)">Exchange</van-button>
+        <van-button class="basic-purple-btn exchange-btn" type="primary" @click="goExchange(item)">Exchange</van-button>
       </div>
     </div>
   </section>
@@ -105,17 +105,8 @@
         }
 
         .exchange-btn {
-          font-family: Barlow-Bold;
-          font-weight: bold;
-          font-size: 14px;
-          color: #FFFFFF;
-          line-height: 1;
-          font-style: normal;
-          background: #6A39FF;
           border-radius: 19px;
-          border: none;
           padding: 7px 23px;
-          height: auto;
         }
       }
       .coin-box:last-child {

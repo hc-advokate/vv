@@ -33,6 +33,12 @@ import IcoHexaCoin from "@/assets/icon/hexa-coin.png";
 import IcoGaiaPurpleCoin from "@/assets/icon/gaia-purple-coin.png";
 import IcoConvert from "@/assets/icon/convert.png";
 
+import IcoMore from "@/assets/icon/more.png";
+import IcoRefresh from "@/assets/icon/refresh.png";
+import IcoDeposit01 from "@/assets/icon/deposit01.png";
+import IcoDeposit02 from "@/assets/icon/deposit02.png";
+import IcoCode from "@/assets/icon/code.png";
+
 import BarAccount from "@/assets/bar/account.png";
 import BarCasino from "@/assets/bar/casino.png";
 import BarEsports from "@/assets/bar/esports.png";
@@ -100,6 +106,11 @@ export default {
 		hexaCoin: IcoHexaCoin,
 		gaiaPurpleCoin: IcoGaiaPurpleCoin,
 		convert: IcoConvert,
+		more: IcoMore,
+		refresh: IcoRefresh,
+		deposit01: IcoDeposit01,
+		deposit02: IcoDeposit02,
+		code: IcoCode,
 	},
 	btn: {
 		mw: BtnMw,

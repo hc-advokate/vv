@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import Constants from "@/plugins/constants";
 	import { reactive } from "vue";
-	import api from "@/api/index";
+	// import api from "@/api/index";
 	import { useRouter } from "vue-router";
 	import { showToast } from "vant";
 
@@ -22,21 +22,22 @@
 			return false;
 		}
 		data.loading = true;
-		api.userApi
-			.loginPwd({
-				username: data.username,
-				password: data.password,
-			})
-			.then((res) => {
-				data.loading = false;
-				if (!res.code) {
-					window.localStorage.setItem("userToken", res.data.token);
-					router.push({ path: "/home" });
-				}
-			})
-			.catch(() => {
-				data.loading = false;
-			});
+		router.push({ path: "/home" });
+		// api.userApi
+		// 	.loginPwd({
+		// 		username: data.username,
+		// 		password: data.password,
+		// 	})
+		// 	.then((res) => {
+		// 		data.loading = false;
+		// 		if (!res.code) {
+		// 			window.localStorage.setItem("userToken", res.data.token);
+		// 			router.push({ path: "/home" });
+		// 		}
+		// 	})
+		// 	.catch(() => {
+		// 		data.loading = false;
+		// 	});
 	};
 </script>
 

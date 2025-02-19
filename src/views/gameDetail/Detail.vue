@@ -4,7 +4,7 @@
     <div class="hl-info-box">
       <div class="top-box">
         <van-image class="top-img" width="100%" height="100%" fit="cover" :src="lbListData[dataObj.index].img" />
-        <van-button class="play-btn" type="primary" color="#6A39FF" @click="playGame">PLAY NOW</van-button>
+        <van-button class="basic-purple-btn play-btn" type="primary" color="#6A39FF" @click="playGame">PLAY NOW</van-button>
         <div class="re-flex-row-center tool-box">
           <div class="re-flex-row-center ls-btn" :class="{'ls-btn-ac' : lbListData[dataObj.index].isLike}" @click="submitLike">
             <van-image class="like-img" fit="cover" :src="lbListData[dataObj.index].isLike ? Constants.ico.like : Constants.ico.unLike" />
@@ -139,12 +139,6 @@
           width: 108px;
           height: 24px;
           border-radius: 13px;
-          font-family: Barlow-Bold;
-          font-weight: bold;
-          font-size: 14px;
-          color: #FFFFFF;
-          line-height: 1 !important;
-          font-style: normal;
           position: absolute;
           top: 50%;
           left: 50%;

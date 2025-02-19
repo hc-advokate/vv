@@ -1,3 +1,16 @@
+.select-container_btm {
+  left: 0 !important;
+}
+.select-container {
+  background: transparent !important;
+  &.van-popover--light .van-popover__content {
+    background: transparent !important;
+  }
+  .van-popover__arrow {
+    display: none;
+  }
+}
+
 .el-table {
   * {
     border-bottom: none !important;
