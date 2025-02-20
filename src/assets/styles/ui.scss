@@ -11,6 +11,34 @@
   }
 }
 
+.order-book {
+  .van-collapse-item {
+    background: transparent !important;
+    .van-cell, .van-collapse-item__wrapper, .van-collapse-item__content {
+      padding: 0;
+      background: transparent !important;
+    }
+    .van-collapse-item__title--expanded:after {
+      display: none;
+    }
+    .van-cell__title {
+      font-family: Barlow-Regular, Barlow;
+      font-weight: 400;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 1;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      align-items: center;
+    }
+    .van-icon {
+      color: #ffffff;
+    }
+  }
+}
+
 .el-table {
   * {
     border-bottom: none !important;

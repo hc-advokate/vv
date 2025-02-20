@@ -43,6 +43,9 @@ import IcoRedYellow from "@/assets/icon/red-yellow.png";
 import IcoPp from "@/assets/icon/pp.png";
 import IcoApplePay from "@/assets/icon/apple-pay.png";
 import IcoGPay from "@/assets/icon/g-pay.png";
+import IcoBCoin from "@/assets/icon/b-coin.png";
+import IcoMark from "@/assets/icon/mark.png";
+import IcoRefreshLight from "@/assets/icon/refresh-light.png";
 
 import BarAccount from "@/assets/bar/account.png";
 import BarCasino from "@/assets/bar/casino.png";
@@ -121,6 +124,9 @@ export default {
 		pp: IcoPp,
 		applePay: IcoApplePay,
 		gPay: IcoGPay,
+		bCoin: IcoBCoin,
+		mark: IcoMark,
+		refreshLight: IcoRefreshLight,
 	},
 	btn: {
 		mw: BtnMw,

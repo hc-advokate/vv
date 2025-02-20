@@ -25,7 +25,7 @@
 					<div class="re-flex-row-center">
 						<img class="bi-ico" :src="Constants.bar.casino" alt="" />
 					</div>
-					<p class="bi-text">Casino</p>
+					<p class="bi-text">Lucky</p>
 				</div>
 				<div class="b-item" @click="onToPage('sports')" :class="{ 'b-item_active': data.current === 'sports' }">
 					<div class="re-flex-row-center">

@@ -264,13 +264,24 @@
         border-radius: 5px;
         margin-top: 10px;
         .item-box {
+          padding: 0 10px;
           :deep(.van-grid-item__content) {
+            aspect-ratio: auto;
             background: transparent;
             padding: 0;
           }
           .buy-icon {
+            width: 100%;
             height: 15px;
+            display: block;
+            object-fit: cover;
           }
+        }
+        .item-box:first-child {
+          padding: 0 10px 0 0;
+        }
+        .item-box:last-child {
+          padding: 0 0 0 10px;
         }
       }
     }

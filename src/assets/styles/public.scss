@@ -73,3 +73,25 @@
   border-radius: 10px;
   border: 0.1px solid rgba(255, 255, 255, 0.5);
 }
+
+.input-reset {
+  background: transparent;
+  border: none;
+  font-family: Barlow-Regular, Barlow;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1;
+  text-align: left;
+  font-style: normal;
+  padding-left: 9px;
+  &::placeholder {
+    font-family: Barlow-Regular, Barlow;
+    font-weight: 400;
+    font-size: 14px;
+    color: #999999;
+    line-height: 1;
+    text-align: left;
+    font-style: normal;
+  }
+}

@@ -269,6 +269,18 @@ export const baseRoutes = [
 				},
 				children: [],
 			},
+			{
+				path: "/temp02",
+				name: "Temp02",
+				component: () => import("@/views/temp/Temp02.vue"),
+				meta: {
+					auth: false,
+					isHide: false,
+					title: "Temp02",
+					name: "Temp02",
+				},
+				children: [],
+			},
 		],
 	},
 	{
