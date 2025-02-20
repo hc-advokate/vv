@@ -1,5 +1,5 @@
 <template>
-  <BasicBack :showTabs="true" :tabTypes="['Top', 'New', 'Crypto', 'Asia', 'Pop Crypto']"></BasicBack>
+  <BasicBack :showTabs="true" :tabTypes="['Top', 'New', 'Crypto', 'Asia', 'Pop Culture']"></BasicBack>
   <section class="hl-temp-box">
     <div class="temp-box-in">
       <p class="title">Balance</p>
@@ -40,6 +40,18 @@
       </div>
       <van-button class="basic-purple-btn code-btn" type="primary" @click="copyCode(codeTxt)">Copy</van-button>
     </div>
+
+    <div class="temp-box-in hl-mt10">
+      <p class="title">Other Methods</p>
+      <div class="buy-box">
+        <van-grid :border="false" direction="horizontal" :column-num="5">
+          <van-grid-item class="item-box" v-for="(item, index) in iconList" :key="index">
+            <van-image class="buy-icon" :src="item.icon" />
+          </van-grid-item>
+        </van-grid>
+        <van-button class="basic-purple-btn buy-btn" type="primary">Buy DGX</van-button>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -51,6 +63,14 @@
   import { showNotify } from 'vant';
 
   const balance = ref('0.00');
+
+  const iconList = ref([
+    { icon: Constants.ico.visa },
+    { icon: Constants.ico.redYellow },
+    { icon: Constants.ico.pp },
+    { icon: Constants.ico.applePay },
+    { icon: Constants.ico.gPay },
+  ]);
 
   const codeTxt = ref('0xs43783hdkEShdf234HSw322034JKLw3229');
   const { toClipboard } = useClipboard();
@@ -226,10 +246,32 @@
         }
       }
 
-      .code-btn {
+      .code-btn, .buy-btn {
         width: 100%;
         height: 29px;
         border-radius: 14px;
+        display: block;
+        margin-top: 10px;
+      }
+      .buy-btn {
+        margin-top: 23px;
+      }
+
+      .buy-box {
+        width: 100%;
+        padding: 19px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 5px;
+        margin-top: 10px;
+        .item-box {
+          :deep(.van-grid-item__content) {
+            background: transparent;
+            padding: 0;
+          }
+          .buy-icon {
+            height: 15px;
+          }
+        }
       }
     }
   }

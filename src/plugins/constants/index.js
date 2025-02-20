@@ -38,6 +38,11 @@ import IcoRefresh from "@/assets/icon/refresh.png";
 import IcoDeposit01 from "@/assets/icon/deposit01.png";
 import IcoDeposit02 from "@/assets/icon/deposit02.png";
 import IcoCode from "@/assets/icon/code.png";
+import IcoVisa from "@/assets/icon/visa.png";
+import IcoRedYellow from "@/assets/icon/red-yellow.png";
+import IcoPp from "@/assets/icon/pp.png";
+import IcoApplePay from "@/assets/icon/apple-pay.png";
+import IcoGPay from "@/assets/icon/g-pay.png";
 
 import BarAccount from "@/assets/bar/account.png";
 import BarCasino from "@/assets/bar/casino.png";
@@ -111,6 +116,11 @@ export default {
 		deposit01: IcoDeposit01,
 		deposit02: IcoDeposit02,
 		code: IcoCode,
+		visa: IcoVisa,
+		redYellow: IcoRedYellow,
+		pp: IcoPp,
+		applePay: IcoApplePay,
+		gPay: IcoGPay,
 	},
 	btn: {
 		mw: BtnMw,

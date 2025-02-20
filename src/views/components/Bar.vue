@@ -33,11 +33,11 @@
 					</div>
 					<p class="bi-text">Sports</p>
 				</div>
-				<div class="b-item" :class="{ 'b-item_active': data.current === 'other' }">
+				<div class="b-item" @click="onToPage('predict')" :class="{ 'b-item_active': data.current === 'predict' }">
 					<div class="re-flex-row-center">
-						<img class="bi-ico" :src="Constants.bar.esports" alt="" />
+						<img class="bi-ico" :src="Constants.bar.predict" alt="" />
 					</div>
-					<p class="bi-text">E-Sports</p>
+					<p class="bi-text">Predict</p>
 				</div>
 				<div class="b-item" @click="onToPage('games')" :class="{ 'b-item_active': data.current === 'games' }">
 					<div class="re-flex-row-center">
@@ -45,11 +45,11 @@
 					</div>
 					<p class="bi-text">Games</p>
 				</div>
-				<div class="b-item" @click="onToPage('predict')" :class="{ 'b-item_active': data.current === 'predict' }">
+				<div class="b-item" :class="{ 'b-item_active': data.current === 'other' }">
 					<div class="re-flex-row-center">
-						<img class="bi-ico" :src="Constants.bar.predict" alt="" />
+						<img class="bi-ico" :src="Constants.bar.esports" alt="" />
 					</div>
-					<p class="bi-text">Predict</p>
+					<p class="bi-text">E-Sports</p>
 				</div>
 				<div class="b-item" @click="onToPage('account')" :class="{ 'b-item_active': data.current === 'account' }">
 					<div class="re-flex-row-center">
