@@ -1,55 +1,74 @@
-// url("@/assets/fonts/SF-Pro-Rounded-Medium.woff2") format("woff2"),
-@font-face {
-  font-family: Arial;
-  font-display: optional;
-  src: url("@/assets/fonts/Arial.ttf") format("truetype");
-}
 @font-face {
   font-family: Barlow;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-Regular.ttf") format("truetype");
+  src: url("@/assets/fonts/Barlow-Regular.ttf");
 }
 @font-face {
   font-family: Barlow-Regular;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-Regular.ttf") format("truetype");
+  src: url("@/assets/fonts/Barlow-Regular.ttf");
 }
 @font-face {
   font-family: Barlow-Bold;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-Bold.ttf") format("truetype");
+  src: url("@/assets/fonts/Barlow-Bold.ttf");
 }
 @font-face {
-  font-family: Barlow-ExtraBold;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-ExtraBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: Barlow-SemiBold;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-SemiBold.ttf") format("truetype");
+  font-family: Barlow-Black;
+  src: url("@/assets/fonts/Barlow-Black.ttf");
 }
 @font-face {
   font-family: Barlow-Medium;
-  font-display: optional;
-  src: url("@/assets/fonts/Barlow-Medium.ttf") format("truetype");
+  src: url("@/assets/fonts/Barlow-Medium.ttf");
+}
+@font-face {
+  font-family: Barlow-ExtraBold;
+  src: url("@/assets/fonts/Barlow-ExtraBold.ttf");
 }
 
 @font-face {
-  font-family: HelveticaNeue;
-  font-display: optional;
-  src: url("@/assets/fonts/HelveticaNeue.ttf") format("truetype");
+  font-family: UniversCE;
+  src: url("@/assets/fonts/Univers CE 55 Medium.ttf");
 }
 @font-face {
-  font-family: HelveticaNeue-Bold;
-  src: url("@/assets/fonts/HelveticaNeue-Bold.ttf") format("truetype");
+  font-family: UniversCE-Medium;
+  src: url("@/assets/fonts/Univers CE 55 Medium.ttf");
 }
 
 @font-face {
-  font-family: Mukta;
-  src: url("@/assets/fonts/Mukta-Regular.ttf") format("truetype");
+  font-family: TacticSans;
+  src: url("@/assets/fonts/TacticSans-Med.ttf");
 }
 @font-face {
-  font-family: Mukta-Regular;
-  src: url("@/assets/fonts/Mukta-Regular.ttf") format("truetype");
+  font-family: TacticSans-Medium;
+  src: url("@/assets/fonts/TacticSans-Med.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("@/assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("@/assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: LuloCleanOne;
+  src: url("@/assets/fonts/Lulo Clean One Bold.otf");
+}
+
+@font-face {
+  font-family: Verdana;
+  src: url("@/assets/fonts/Verdana.ttf");
+}
+@font-face {
+  font-family: Verdana-Bold;
+  src: url("@/assets/fonts/Verdana-Bold.ttf");
+}
+
+@font-face {
+  font-family: Arial;
+  src: url("@/assets/fonts/Arial.ttf");
+}
+@font-face {
+  font-family: Arial-Bold;
+  src: url("@/assets/fonts/ARIALBD.TTF");
 }

@@ -1,5 +1,5 @@
+import mkp from "./modules/mkp.js";
 import user from "./modules/user.js";
-import generate from "./modules/generate.js";
 
 /**
  * url *
@@ -9,8 +9,8 @@ import generate from "./modules/generate.js";
  */
 
 const api = {
-	userApi: user,
-	generateApi: generate,
+  mkpApi: mkp,
+  userApi: user,
 };
 
 export default api;

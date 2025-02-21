@@ -6,7 +6,7 @@ const store = createPinia();
 
 // 不必额外导入，直接使用此方法
 export const getStoreRefs = (store) => {
-	return storeToRefs(store);
+  return storeToRefs(store);
 };
 
 // 导出自定义其他状态文件
@@ -14,7 +14,7 @@ import { useTemp } from "./modules/temp.js";
 import { useTg } from "./modules/tg.js";
 
 export const appStore = {
-	useTemp: useTemp(store),
-	useTg: useTg(store),
+  useTemp: useTemp(store),
+  useTg: useTg(store),
 };
 export default store;

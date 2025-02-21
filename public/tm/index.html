@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>HexaHero</title>
+    <style>
+        *, html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            cursor: pointer;
+        }
+        .f-c {
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #ton-connect * {
+            display: none;
+        }
+        #app {
+            width: 100%;
+            position: relative;
+            z-index: 9;
+        }
+        .c-b {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-bg {
+            width: 100%;
+            height: 100%;
+        }
+        .i-logo {
+            padding: 0 4rem 0;
+        }
+        .i-btn {
+            padding: 3rem 4.5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        .i-btn iframe {
+            opacity: 1;
+        }
+        .i-btn .b-img {
+            position: absolute;
+            z-index: 9;
+            top: 10px;
+        }
+        .i-desc {
+            padding: 15rem 0 0;
+        }
+        #tc-widget-root .s-enter-active > div > div {
+            width: 100%;
+        }
+        #tc-widget-root > tc-root > div > div > div > div {
+            min-height: 20vh;
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <img src="img/bg.png" alt="" class="img-bg"/>
+    <div class="c-b">
+        <div class="f-c i-logo">
+            <img src="img/logo.png" alt=""/>
+        </div>
+        <div class="f-c i-btn">
+            <script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="advoktest_bot" data-size="large" data-userpic="false" data-radius="20" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+            <script type="text/javascript">
+                function onTelegramAuth(user) {
+                    console.log(user);
+                    const url = "https://test-api.metagaia.io/api/v1/login/telegram";
+                    $.post(url, {name: "Hexahero", oathDataJsonStr: JSON.stringify(user)}, async function (result) {
+                        window.location.href = `https://hexahero.metagaia.io/#token=${result.data.token}end`;
+                    });
+                }
+            </script>
+<!--            <div class="f-c b-img" style="pointer-events: none;">-->
+<!--                <img src="img/btn.png" alt="" style="pointer-events: none;"/>-->
+<!--            </div>-->
+        </div>
+        <div class="f-c i-desc">
+            <img src="img/desc.png" alt=""/>
+        </div>
+    </div>
+</div>
+<div id="ton-connect" style="display: none;"></div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    let data = {};
+    window.Telegram.WebApp.expand();
+    // 调用函数
+    function onConnect() {
+       window.location.href = "https://oauth.telegram.org/auth?bot_id=7275348592&origin=https://test-www.gaiai.io/tm&request_access=write";
+    }
+
+    function urlToObj(url) {
+        let obj = {};
+        if (!url) return obj;
+        // @ts-ignore
+        url.replace(/([^?=&#]+)=([^?=&#]+)/g, (_, key, value) => (obj[key] = value));
+        // @ts-ignore
+        url.replace(/#([^?=&#]+)/g, (_, hash) => (obj["HASH"] = hash));
+        return obj;
+    }
+
+    // function onTelegramAuth(user) {
+    //     alert(user);
+    //     data = user;
+    // }
+
+    function initData() {
+        // const params = urlToObj(window.location.href);
+        // if (!params.id) return false;
+        // const url = "https://api.metagaia.io//api/v1/login/telegram";
+        // $.post(url, {name: "Hexahero", oathDataJsonStr: JSON.stringify(data)}, async function (result) {
+        //     window.location.href = `https://hexahero.metagaia.io/#token=${result.data.token}end`;
+        // });
+    }
+    // initData();
+</script>
+</body>
+</html>

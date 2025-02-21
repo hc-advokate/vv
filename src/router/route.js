@@ -1,131 +1,171 @@
 export const errorRoutes = [
-	{
-		path: "/:path(.*)*",
-		name: "redirect",
-		redirect: "/404",
-		meta: {
-			auth: false,
-			isHide: true,
-		},
-	},
-	{
-		path: "/:pathMatch(.*)*",
-		name: "redirect",
-		redirect: "/404",
-		meta: {
-			auth: false,
-			isHide: true,
-		},
-	},
-	{
-		path: "/401",
-		name: "noPower",
-		component: () => import("@/views/error/NoPower.vue"),
-		meta: {
-			title: "NoPower",
-			name: "NoPower",
-			auth: false,
-			isHide: true,
-		},
-	},
-	{
-		path: "/404",
-		name: "notFound",
-		component: () => import("@/views/error/NotFound.vue"),
-		meta: {
-			title: "NotFound",
-			name: "NotFound",
-			auth: false,
-			isHide: true,
-		},
-	},
-	{
-		path: "/500",
-		name: "serverError",
-		component: () => import("@/views/error/ServerError.vue"),
-		meta: {
-			title: "ServerError",
-			name: "ServerError",
-			auth: false,
-			isHide: true,
-		},
-	},
-	{
-		path: "/tips",
-		name: "tips",
-		component: () => import("@/views/error/Tips.vue"),
-		meta: {
-			title: "tips",
-			name: "tips",
-			auth: false,
-			isHide: true,
-		},
-	},
+  {
+    path: "/:path(.*)*",
+    name: "redirect",
+    redirect: "/404",
+    meta: {
+      auth: false,
+      isHide: true,
+    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "redirect",
+    redirect: "/404",
+    meta: {
+      auth: false,
+      isHide: true,
+    },
+  },
+  {
+    path: "/401",
+    name: "noPower",
+    component: () => import("@/views/error/NoPower.vue"),
+    meta: {
+      title: "NoPower",
+      name: "NoPower",
+      auth: false,
+      isHide: true,
+    },
+  },
+  {
+    path: "/404",
+    name: "notFound",
+    component: () => import("@/views/error/NotFound.vue"),
+    meta: {
+      title: "NotFound",
+      name: "NotFound",
+      auth: false,
+      isHide: true,
+    },
+  },
+  {
+    path: "/500",
+    name: "serverError",
+    component: () => import("@/views/error/ServerError.vue"),
+    meta: {
+      title: "ServerError",
+      name: "ServerError",
+      auth: false,
+      isHide: true,
+    },
+  },
 ];
 
 export const baseRoutes = [
-	{
-		path: "",
-		name: "",
-		meta: {
-			auth: false,
-			isHide: false,
-		},
-		redirect: (to) => {
-			return { path: "/index" };
-		},
-		children: [],
-	},
-	{
-		path: "/index",
-		name: "Index",
-		component: () => import("@/views/Index.vue"),
-		meta: {
-			auth: true,
-			isHide: false,
-			title: "Index",
-			name: "Index",
-		},
-		redirect: (to) => {
-			return { path: "/home" };
-		},
-		children: [
-			{
-				path: "/home",
-				name: "Home",
-				component: () => import("@/views/home/Index.vue"),
-				meta: {
-					auth: true,
-					isHide: false,
-					title: "Home",
-					name: "Home",
-				},
-				children: [],
-			},
-		],
-	},
-	{
-		path: "/test",
-		name: "Test",
-		component: () => import("@/views/demo/SeamlessScroll.vue"),
-		meta: {
-			auth: false,
-			isHide: false,
-			title: "Test",
-			name: "Test",
-		},
-	},
-	{
-		path: "/demo",
-		name: "Demo",
-		component: () => import("@/views/demo/Index.vue"),
-		meta: {
-			auth: false,
-			isHide: false,
-			title: "Demo",
-			name: "Demo",
-		},
-	},
+  {
+    path: "",
+    name: "",
+    component: () => import("@/views/admin/Index.vue"),
+    meta: {
+      auth: false,
+      isHide: false,
+    },
+    redirect: to => {
+      return {path: "/home"}
+    },
+    children: [{
+      path: "/home",
+      name: "GamesHome",
+      component: () => import("@/views/admin/Home.vue"),
+      meta: {
+        title: "GamesHome",
+        name: "GamesHome",
+      },
+    },{
+      path: "/detail",
+      name: "GamesDetail",
+      component: () => import("@/views/admin/Detail.vue"),
+      meta: {
+        title: "GamesDetail",
+        name: "GamesDetail",
+      },
+    },],
+  }, {
+    path: "/loading",
+    name: "Loading",
+    component: () => import("@/views/admin/m/components/Loading.vue"),
+    meta: {
+      title: "Loading",
+      name: "Loading",
+    },
+  }, {
+    path: "/user",
+    name: "User",
+    component: () => import("@/views/Index.vue"),
+    meta: {
+      auth: false,
+      isHide: false,
+    },
+    redirect: to => {
+      return {path: "/shop"}
+    },
+    children: [{
+      path: "/shop",
+      name: "UserShop",
+      component: () => import("@/views/Shop.vue"),
+      meta: {
+        title: "UserShop",
+        name: "UserShop",
+      },
+    }, {
+      path: "/earn",
+      name: "UserEarn",
+      component: () => import("@/views/Earn.vue"),
+      meta: {
+        title: "UserEarn",
+        name: "UserEarn",
+      },
+    }, {
+      path: "/invite",
+      name: "UserInvite",
+      component: () => import("@/views/Invite.vue"),
+      meta: {
+        title: "UserInvite",
+        name: "UserInvite",
+      },
+    }, {
+      path: "/friends",
+      name: "UserFriends",
+      component: () => import("@/views/InviteFriends.vue"),
+      meta: {
+        title: "UserFriends",
+        name: "UserFriends",
+      },
+    }, {
+      path: "/requests",
+      name: "UserRequests",
+      component: () => import("@/views/InviteRequests.vue"),
+      meta: {
+        title: "UserRequests",
+        name: "UserRequests",
+      },
+    }, {
+      path: "/wallet",
+      name: "UserWallet",
+      component: () => import("@/views/Wallet.vue"),
+      meta: {
+        title: "UserWallet",
+        name: "UserWallet",
+      },
+    }, {
+      path: "/exchange",
+      name: "UserExchange",
+      component: () => import("@/views/Exchange.vue"),
+      meta: {
+        title: "UserExchange",
+        name: "UserExchange",
+      },
+    },],
+  }, {
+    path: "/test",
+    name: "Test",
+    component: () => import("@/views/admin/m/Test.vue"),
+    meta: {
+      title: "Test",
+      name: "Test",
+    },
+  },
 ];
 
 export default [...errorRoutes, ...baseRoutes];

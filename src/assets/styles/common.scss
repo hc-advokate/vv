@@ -33,7 +33,6 @@ $prefix: re;
   @include h-fill;
 }
 
-// 文本
 .#{$prefix}-tl {
   text-align: left;
 }
@@ -42,9 +41,6 @@ $prefix: re;
 }
 .#{$prefix}-tc {
   text-align: center;
-}
-.#{$prefix}-t-cp {
-  cursor: pointer;
 }
 
 @mixin flex-base {
@@ -94,11 +90,6 @@ $prefix: re;
   justify-content: space-between;
   align-items: center;
 }
-.#{$prefix}-flex-row-between-fs {
-  @include flex-base;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 .#{$prefix}-flex-row-reverse {
   @include flex-base;
   flex-direction: row-reverse;
@@ -129,18 +120,20 @@ $prefix: re;
   align-items: center;
 }
 
+.#{$prefix}-cursor-pointer {
+  cursor: pointer;
+}
+
 // 边距相关
 @for $i from 1 to 500 {
   .#{$prefix}-m-#{$i} {
     margin: #{$i}px;
   }
   .#{$prefix}-mtb-#{$i} {
-    margin-top: #{$i}px;
-    margin-bottom: #{$i}px;
+    margin: #{$i}px 0;
   }
   .#{$prefix}-mlr-#{$i} {
-    margin-left: #{$i}px;
-    margin-right: #{$i}px;
+    margin: 0 #{$i}px;
   }
   .#{$prefix}-mt-#{$i} {
     margin-top: #{$i}px;
@@ -159,12 +152,10 @@ $prefix: re;
     padding: #{$i}px;
   }
   .#{$prefix}-ptb-#{$i} {
-    padding-top: #{$i}px;
-    padding-bottom: #{$i}px;
+    padding: #{$i}px 0;
   }
   .#{$prefix}-plr-#{$i} {
-    padding-left: #{$i}px;
-    padding-right: #{$i}px;
+    padding: 0 #{$i}px;
   }
   .#{$prefix}-pt-#{$i} {
     padding-top: #{$i}px;
@@ -196,8 +187,4 @@ $sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 
   .#{$prefix}-font-#{$size} {
     font-size: #{$size}px;
   }
-}
-
-.#{$prefix}-cp {
-  cursor: pointer;
 }

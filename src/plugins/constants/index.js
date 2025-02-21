@@ -1,227 +1,498 @@
-import Logo from "@/assets/images/logo.png";
-import LogoIco from "@/assets/images/logo_ico.png";
-import BgRegister from "@/assets/images/register-bg.mp4";
-
-import Left from "@/assets/images/icon/left.png";
-import MenuHome from "@/assets/images/icon/menu-home.png";
-import MenuHomeAct from "@/assets/images/icon/menu-home_active.png";
-import MenuInvest from "@/assets/images/icon/menu-invest.png";
-import MenuInvestAct from "@/assets/images/icon/menu-invest_active.png";
-import MenuMy from "@/assets/images/icon/menu-my.png";
-import MenuMyAct from "@/assets/images/icon/menu-my_active.png";
-import MenuWallet from "@/assets/images/icon/menu-wallet.png";
-import MenuWalletAct from "@/assets/images/icon/menu-wallet_active.png";
-import TkIn from "@/assets/images/icon/tk-in.png";
-import TkX from "@/assets/images/icon/tk-x.png";
-
-import ArtBig01 from "@/assets/images/article/art-big-01.png";
-import ArtBig02 from "@/assets/images/article/art-big-02.png";
-import ArtBig03 from "@/assets/images/article/art-big-03.png";
-import ArtBig04 from "@/assets/images/article/art-big-04.png";
-import ArtBig05 from "@/assets/images/article/art-big-05.png";
-import ArtBig06 from "@/assets/images/article/art-big-06.png";
-import Art01 from "@/assets/images/article/art-01.png";
-import Art02 from "@/assets/images/article/art-02.png";
-import Art03 from "@/assets/images/article/art-03.png";
-import Art04 from "@/assets/images/article/art-04.png";
-import Art05 from "@/assets/images/article/art-05.png";
-import Art06 from "@/assets/images/article/art-06.png";
-import Art07 from "@/assets/images/article/art-07.png";
-import Art08 from "@/assets/images/article/art-08.png";
-import Art09 from "@/assets/images/article/art-09.png";
-import Art10 from "@/assets/images/article/art-10.png";
-import Art11 from "@/assets/images/article/art-11.png";
-import Art12 from "@/assets/images/article/art-12.png";
-import Art13 from "@/assets/images/article/art-13.png";
-import Art14 from "@/assets/images/article/art-14.png";
-import Art15 from "@/assets/images/article/art-15.png";
-import Art16 from "@/assets/images/article/art-16.png";
-import Art17 from "@/assets/images/article/art-17.png";
-import TeamLogo01 from "@/assets/images/team/logo-01.png";
-import TeamLogo02 from "@/assets/images/team/logo-02.png";
-import TeamLogo03 from "@/assets/images/team/logo-03.png";
-import TeamLogo04 from "@/assets/images/team/logo-04.png";
-import TeamLogo05 from "@/assets/images/team/logo-05.png";
-import TeamLogo06 from "@/assets/images/team/logo-06.png";
-import TeamLogo07 from "@/assets/images/team/logo-07.png";
-import TeamLogo08 from "@/assets/images/team/logo-08.png";
-import TeamLogo09 from "@/assets/images/team/logo-09.png";
-import TeamLogo10 from "@/assets/images/team/logo-10.png";
-import TeamLogo11 from "@/assets/images/team/logo-11.png";
-import TeamLogo12 from "@/assets/images/team/logo-12.png";
-import TeamLogo13 from "@/assets/images/team/logo-13.png";
-import TeamLogo14 from "@/assets/images/team/logo-14.png";
-import TeamLogo15 from "@/assets/images/team/logo-15.png";
-import TeamLogo16 from "@/assets/images/team/logo-16.png";
-import JoinImg from "@/assets/images/article/join-img.png";
-import Blog01 from "@/assets/images/blog/blog-01.png";
-import Blog02 from "@/assets/images/blog/blog-02.png";
-import Blog03 from "@/assets/images/blog/blog-03.png";
-import Blog04 from "@/assets/images/blog/blog-04.png";
-import Blog05 from "@/assets/images/blog/blog-05.png";
-import Blog06 from "@/assets/images/blog/blog-06.png";
-import Blog07 from "@/assets/images/blog/blog-07.png";
-
-import ProductImg01 from "@/assets/images/home/ls-usdg.png";
-import ProductImg02 from "@/assets/images/home/ls-satori.png";
-import ProductImg03 from "@/assets/images/home/ls-ltp.png";
-import ProductImg04 from "@/assets/images/home/ls-smart.png";
-import ProductImg05 from "@/assets/images/home/ls-meme.png";
-import ProductImg06 from "@/assets/images/home/ls-psp.png";
-import ProductImg07 from "@/assets/images/home/ls-ep.png";
-import ProductImg08 from "@/assets/images/home/ls-icon-usdg.png";
-import ProductImg09 from "@/assets/images/home/ls-icon-sf.png";
-import ProductImg10 from "@/assets/images/home/ls-icon-mf.png";
-import ProductImg11 from "@/assets/images/home/ls-icon-psp.png";
-import ProductImg12 from "@/assets/images/home/ls-chain-01.png";
-import ProductImg13 from "@/assets/images/home/ls-chain-02.png";
-import ProductImg14 from "@/assets/images/home/ls-chain-03.png";
-
-import TableWhiteIcon01 from "@/assets/images/detail/tableWhite-icon-01.png";
-import TableWhiteIcon02 from "@/assets/images/detail/tableWhite-icon-02.png";
-import TableWhiteIcon03 from "@/assets/images/detail/tableWhite-icon-03.png";
-import TableWhiteIcon04 from "@/assets/images/detail/tableWhite-icon-04.png";
-import TableWhiteIcon05 from "@/assets/images/detail/tableWhite-icon-05.png";
-import TableWhiteIcon06 from "@/assets/images/detail/tableWhite-icon-06.png";
-import TableWhiteIcon07 from "@/assets/images/detail/tableWhite-icon-07.png";
-import TableWhiteIcon08 from "@/assets/images/detail/tableWhite-icon-08.png";
-import TableWhiteIconR from "@/assets/images/detail/tableWhite-iconR.png";
-
-import ChartImg01 from "@/assets/images/detail/chart-img01.png";
-import ChartImg02 from "@/assets/images/detail/chart-img02.png";
-import ChartLogo01 from "@/assets/images/detail/chart-logo-01.png";
-import ChartLogo02 from "@/assets/images/detail/chart-logo-02.png";
-import ChartLogo03 from "@/assets/images/detail/chart-logo-03.png";
-
-import InfoImg01 from "@/assets/images/detail/info-img01.png";
-import InfoImg02 from "@/assets/images/detail/info-img02.png";
-import InfoImg03 from "@/assets/images/detail/info-img03.png";
-import InfoLogo01 from "@/assets/images/detail/info-logo-01.png";
-
-import IcoMenu from "@/assets/images/home/menu.png";
-
-import BtnMm from "@/assets/images/icon/btn_mm.png";
-import BtnMw from "@/assets/images/icon/btn_mw.png";
-import BtnPt from "@/assets/images/icon/btn_pt.png";
-import BtnSf from "@/assets/images/icon/btn_sf.png";
-import BtnSt from "@/assets/images/icon/btn_st.png";
+import Video1 from "@/assets/games/running-trailer-v3.mp4";
+import NewGamesImg01 from "@/assets/games/new-games01.png";
+import NewGamesImg15 from "@/assets/games/new-games15.png";
+import NewGamesImg16 from "@/assets/games/new-games16.png";
+import NewGamesImg04 from "@/assets/games/new-games04.png";
+import NewGamesImg05 from "@/assets/games/new-games05.png";
+import NewGamesImg11 from "@/assets/games/new-games11.png";
+import NewGamesImg12 from "@/assets/games/new-games12.png";
+import NewGamesImg13 from "@/assets/games/new-games13.png";
+import NewGamesImg06 from "@/assets/games/new-games06.png";
+import NewGamesImg07 from "@/assets/games/new-games07.png";
+import NewGamesImg08 from "@/assets/games/new-games08.png";
+import NewGamesImg09 from "@/assets/games/new-games09.png";
+import NewGamesImg10 from "@/assets/games/new-games10.png";
+import NewGamesImg20 from "@/assets/games/new-games20.png";
+import FmGh from "@/assets/games/fm-gh.png";
+import FmDc from "@/assets/games/fm-dc.png";
+import FmHr from "@/assets/games/fm-hr.png";
+import FmAm from "@/assets/games/fm-am.png";
+import NewGamesImg02 from "@/assets/games/new-games02.png";
+import NewGamesImg03 from "@/assets/games/new-games03.png";
 
 export default {
-	img: {
-		logo: Logo,
-		logoIco: LogoIco,
-	},
-	menu: {
-		home: MenuHome,
-		homeAct: MenuHomeAct,
-		invest: MenuInvest,
-		investAct: MenuInvestAct,
-		my: MenuMy,
-		myAct: MenuMyAct,
-		wallet: MenuWallet,
-		walletAct: MenuWalletAct,
-	},
-	ico: {
-		left: Left,
-		tkIn: TkIn,
-		tkX: TkX,
-		menu: IcoMenu,
-		btnMm: BtnMm,
-		btnMw: BtnMw,
-		btnPt: BtnPt,
-		btnSf: BtnSf,
-		btnSt: BtnSt,
-	},
-	article: {
-		artBig01: ArtBig01,
-		artBig02: ArtBig02,
-		artBig03: ArtBig03,
-		artBig04: ArtBig04,
-		artBig05: ArtBig05,
-		artBig06: ArtBig06,
-		art01: Art01,
-		art02: Art02,
-		art03: Art03,
-		art04: Art04,
-		art05: Art05,
-		art06: Art06,
-		art07: Art07,
-		art08: Art08,
-		art09: Art09,
-		art10: Art10,
-		art11: Art11,
-		art12: Art12,
-		art13: Art13,
-		art14: Art14,
-		art15: Art15,
-		art16: Art16,
-		art17: Art17,
-		joinImg: JoinImg,
-	},
-	team: {
-		teamLogo01: TeamLogo01,
-		teamLogo02: TeamLogo02,
-		teamLogo03: TeamLogo03,
-		teamLogo04: TeamLogo04,
-		teamLogo05: TeamLogo05,
-		teamLogo06: TeamLogo06,
-		teamLogo07: TeamLogo07,
-		teamLogo08: TeamLogo08,
-		teamLogo09: TeamLogo09,
-		teamLogo10: TeamLogo10,
-		teamLogo11: TeamLogo11,
-		teamLogo12: TeamLogo12,
-		teamLogo13: TeamLogo13,
-		teamLogo14: TeamLogo14,
-		teamLogo15: TeamLogo15,
-		teamLogo16: TeamLogo16,
-	},
-	blog: {
-		blog01: Blog01,
-		blog02: Blog02,
-		blog03: Blog03,
-		blog04: Blog04,
-		blog05: Blog05,
-		blog06: Blog06,
-		blog07: Blog07,
-	},
-	detail: {
-		tableWhiteIcon01: TableWhiteIcon01,
-		tableWhiteIcon02: TableWhiteIcon02,
-		tableWhiteIcon03: TableWhiteIcon03,
-		tableWhiteIcon04: TableWhiteIcon04,
-		tableWhiteIcon05: TableWhiteIcon05,
-		tableWhiteIcon06: TableWhiteIcon06,
-		tableWhiteIcon07: TableWhiteIcon07,
-		tableWhiteIcon08: TableWhiteIcon08,
-		tableWhiteIconR: TableWhiteIconR,
-		chartImg01: ChartImg01,
-		chartImg02: ChartImg02,
-		chartLogo01: ChartLogo01,
-		chartLogo02: ChartLogo02,
-		chartLogo03: ChartLogo03,
-		infoImg01: InfoImg01,
-		infoImg02: InfoImg02,
-		infoImg03: InfoImg03,
-		infoLogo01: InfoLogo01,
-	},
-	home: {
-		productImg01: ProductImg01,
-		productImg02: ProductImg02,
-		productImg03: ProductImg03,
-		productImg04: ProductImg04,
-		productImg05: ProductImg05,
-		productImg06: ProductImg06,
-		productImg07: ProductImg07,
-		productImg08: ProductImg08,
-		productImg09: ProductImg09,
-		productImg10: ProductImg10,
-		productImg11: ProductImg11,
-		productImg12: ProductImg12,
-		productImg13: ProductImg13,
-		productImg14: ProductImg14,
-	},
-	video: {
-		bgRegister: BgRegister,
-	},
+  gameToken1: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0NjAxMTk3ODU1MTcwODg3NjgiLCJlbWFpbCI6IjcxNDcyMTdAMTYzLmNvbSIsInBob25lIjoiMTg2LTE4MjExMDIxOTAyIiwiaWF0IjoxNzM4ODI3MzU2LCJleHAiOjE3NDE0MTkzNTZ9.z59114J50K1P6xAmgvVUFJy-55qZi94ZQV-TNBYH9oA",
+  gameHomeBan: [{
+    id: 1,
+    img: NewGamesImg01,
+    v: Video1,
+    title: "HexaHero",
+    key: "HexaHero",
+    desc: "HexaHero is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+    url: `true`,
+    isLike: false,
+    love: 0,
+    view: "0",
+  }],
+  gameHomeHot: [{
+    id: 14,
+    img: NewGamesImg04,
+    title: "Gemfruit Harvest",
+    key: "GemfruitHarvest",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 11,
+    img: NewGamesImg01,
+    title: "DreamCatcher",
+    key: "DreamCatcher",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 15,
+    img: NewGamesImg05,
+    title: "Hexa Ringracer",
+    key: "HexaRingracer",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 10,
+    img: NewGamesImg11,
+    title: "AirDrop Mania",
+    key: "AirDropMania",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 16,
+    img: NewGamesImg12,
+    title: "Monster Planet",
+    key: "Monster",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 17,
+    img: NewGamesImg13,
+    title: "Hexa Arena",
+    key: "HexaHero",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 20,
+    img: NewGamesImg20,
+    title: "Baccarat game",
+    key: "Baccaratgame",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 19,
+    img: NewGamesImg15,
+    title: "Blackjack game",
+    key: "Blackjackgame",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  }, {
+    id: 18,
+    img: NewGamesImg16,
+    title: "Slot game",
+    key: "Slotgame",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: `true`,
+    isLike: false,
+  },],
+  gameHomeSon: [{
+    id: 21,
+    img: NewGamesImg06,
+    title: "Bowmaster",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: "",
+    isLike: false,
+  }, {
+    id: 22,
+    img: NewGamesImg07,
+    title: "Tank Blood Fury: Mul",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: "",
+    isLike: false,
+  }, {
+    id: 23,
+    img: NewGamesImg08,
+    title: "Egg Up",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: "",
+    isLike: false,
+  }, {
+    id: 24,
+    img: NewGamesImg09,
+    title: "Merge Master Poppy B",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: "",
+    isLike: false,
+  }, {
+    id: 25,
+    img: NewGamesImg10,
+    title: "Skate Fun 3D",
+    desc: "lucasneryoficial",
+    view: "0",
+    love: "0",
+    url: "",
+    isLike: false,
+  },],
+  gameDetail: [{
+    id: 1,
+    img: null,
+    v: Video1,
+    title: "HexaHero",
+    titleSub: "MetaGaia Games",
+    key: "HexaHero",
+    desc: "HexaHero is a tournament in the future where teams build robots to compete for fame, glory and cash prizes. In the year 2048, it has become the most popular spectator sport in the galaxy — drawing engineers, scientists and designers from all over the universe to match using their skills and wit. Each season, gamers compete for a grand jackpot prize with the chance to win other prizes and trophies along the way.",
+    url: `https://hexahero.metagaia.io/`,
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 14,
+    img: FmGh,
+    v: null,
+    title: "Gemfruit Harvest",
+    titleSub: "MetaGaia Games",
+    key: "GemfruitHarvest",
+    desc: "GemFruit Harvest is a classic connecting game. The goal is to connect three or more identical GemFruits. There is a time limit, so think quickly! If you get stuck, there’re tools to help you out.",
+    url: `https://gamecenter.tokenation.fi/ccw/`,
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Puzzle", "Connect"],
+  }, {
+    id: 11,
+    img: FmDc,
+    v: null,
+    title: "DreamCatcher",
+    titleSub: "MetaGaia Games",
+    key: "DreamCatcher",
+    desc: "Dozing off into the adventurous dreamland and collect all the wonderful dreamcatchers for a sweet dream!",
+    url: `https://gamecenter.tokenation.fi/dcw/`,
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Casual", "Action"],
+  }, {
+    id: 15,
+    img: FmHr,
+    v: null,
+    title: "Hexa Ringracer",
+    titleSub: "MetaGaia Games",
+    key: "HexaRingracer",
+    desc: "Get ready to skilfully pilot Hexa to zoom through racetrack set in the vastness of space filled",
+    url: `https://gamecenter.tokenation.fi/dgw/`,
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Racing"],
+  }, {
+    id: 10,
+    img: FmAm,
+    v: null,
+    title: "AirDrop Mania",
+    titleSub: "MetaGaia Games",
+    key: "AirDropMania",
+    desc: "Merge your way to the top in this addictive puzzle game! Combine tokens to create higher-level ones and strategically plan your moves to avoid gridlock. With vibrant graphics, challenging levels, and global leaderboards, AirDrop Mania offers endless fun and brain-teasing puzzles. Can you reach the ultimate TOKENATION token? Start merging now!",
+    url: `https://gamecenter.tokenation.fi/xgw/`,
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Puzzle", "Connect"],
+  }, {
+    id: 12,
+    img: NewGamesImg02,
+    v: null,
+    title: "Jujuraiders",
+    titleSub: "MetaGaia Games",
+    key: "Jujuraiders",
+    desc: "Experience the Thrill of JuJuRaiders - Where Strategy and Speed Collide! Join the fast-paced and exhilarating universe of JuJuRaiders, the latest multiplayer sensation exclusive to the MetaGaia Metaverse. In this futuristic world, strategy and action merge to create an adventure like no other. Are you ready to embark on a quest filled with excitement, challenges and endless fun?",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Casual", "Multiplayer"],
+  }, {
+    id: 13,
+    img: NewGamesImg03,
+    v: null,
+    title: "Maze",
+    titleSub: "MetaGaia Games",
+    key: "Maze",
+    desc: "Maze is a fun and exciting puzzle multiplayer puzzle game. Players will be racing to the finish line through a huge number of twists and turns; collect gadgets to progress faster.",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Puzzle", "Multiplayer", "Racing"],
+  }, {
+    id: 16,
+    img: NewGamesImg12,
+    v: null,
+    title: "Monster Planet",
+    titleSub: "MetaGaia Games",
+    key: "Monster",
+    desc: "Dive into the relentless action of Monster Planet, where survival is key! On this monster-infested world, you're the Hero in constant motion, fighting off endless waves of ferocious creatures. Each moment counts in this thrilling adventure!",
+    url: "https://gamecenter.tokenation.fi/rgw/",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Puzzle", "Multiplayer", "Racing"],
+  }, {
+    id: 17,
+    img: NewGamesImg13,
+    v: null,
+    title: "Hexa Arena",
+    titleSub: "MetaGaia Games",
+    key: "HexaHero",
+    desc: "Enter the exhilarating world of Hexa Arena, where you pilot powerful mechs in an all-out battle for dominance! Choose your Hexa mech and dive into intense, non-stop action as you shoot down waves of enemy mechs. Collect upgrades, enhance your firepower, and become the ultimate mech warrior. Hexa Arena offers an adrenaline-pumping experience that will keep you hooked!",
+    url: "https://gamecenter.tokenation.fi/haw/",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Puzzle", "Multiplayer", "Racing"],
+  }, {
+    id: 21,
+    img: NewGamesImg06,
+    v: null,
+    title: "Bowmaster",
+    titleSub: "MetaGaia Games",
+    key: "Bowmaster",
+    desc: "lucasneryoficial",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 22,
+    img: NewGamesImg07,
+    v: null,
+    title: "Tank Blood Fury: Mul",
+    titleSub: "MetaGaia Games",
+    key: "TankBloodFury",
+    desc: "lucasneryoficial",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 23,
+    img: NewGamesImg08,
+    v: null,
+    title: "Egg Up",
+    titleSub: "MetaGaia Games",
+    key: "EggUp",
+    desc: "lucasneryoficial",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 24,
+    img: NewGamesImg09,
+    v: null,
+    title: "Merge Master Poppy B",
+    titleSub: "MetaGaia Games",
+    key: "MergeMasterPoppy",
+    desc: "lucasneryoficial",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 25,
+    img: NewGamesImg10,
+    v: null,
+    title: "Skate Fun 3D",
+    titleSub: "MetaGaia Games",
+    key: "SkateFun",
+    desc: "lucasneryoficial",
+    url: "",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "",
+    developer: "MetaGaia Games",
+    released: "May 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Turn-based", "Strategy", "Card"],
+  }, {
+    id: 19,
+    img: NewGamesImg15,
+    v: null,
+    title: "Blackjack game",
+    titleSub: "MetaGaia Games",
+    key: "Blackjackgame",
+    desc: "Welcome to the exciting world of multiplayer blackjack, where you can experience the thrill of the casino right in the comfort of your own home.",
+    url: "https://gamecenter.tokenation.fi/bjw/",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "87 (18,910 votes)",
+    developer: "MetaGaia Games",
+    released: "Sep 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Cards"],
+  }, {
+    id: 18,
+    img: NewGamesImg16,
+    v: null,
+    title: "Slot game",
+    titleSub: "MetaGaia Games",
+    key: "Slotgame",
+    desc: "Find the latest slots and games bonuses. Welcome bonus, bonus daily spins and many prizes. Choose yours for a chance to win! Only at Tokenation!",
+    url: "https://gamecenter.tokenation.fi/sgw/",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "87 (18,910 votes)",
+    developer: "MetaGaia Games",
+    released: "Sep 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Slot"],
+  }, {
+    id: 20,
+    img: NewGamesImg20,
+    v: null,
+    title: "Baccarat game",
+    titleSub: "MetaGaia Games",
+    key: "Baccaratgame",
+    desc: "Baccarat: The Classic Casino Thrill!\n Place your bets on Player, Banker, or Tie and feel the rush of every deal! Easy to play, exciting to win—join now and experience the ultimate casino classic!",
+    url: "https://gamecenter.tokenation.fi/baw/",
+    isLike: false,
+    love: 0,
+    view: "0",
+    rating: "87 (18,910 votes)",
+    developer: "MetaGaia Games",
+    released: "Sep 2024",
+    technology: "HTML5",
+    platform: "Browser (desktop, mobile, tablet)",
+    classification: "",
+    tags: ["Games", "Baccarat"],
+  }],
 };

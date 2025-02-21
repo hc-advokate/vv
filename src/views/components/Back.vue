@@ -1,70 +1,84 @@
-<script setup>
-	import Constants from "@/plugins/constants";
-
-	const props = defineProps({
-		title: {
-			type: String,
-			default: "",
-		},
-		url: {
-			type: String,
-			default: "",
-		},
-	});
-
-	const router = useRouter();
-	const onToBack = () => {
-		if (props.url) {
-			router.push({ path: props.url });
-		} else {
-			window.history.back();
-		}
-	};
-</script>
-
 <template>
-	<div class="re-w-full main-header">
-		<div
-			class="main-back re-flex-row-center-ai"
-			@click="onToBack">
-			<img
-				:src="Constants.ico.left"
-				alt=""
-				class="ico-back" />
-			BACK
-		</div>
-		<div class="re-w-full re-h-full re-flex-row-center cc-title">
-			{{ props.title }}
-		</div>
-	</div>
+  <div class="back re-w-full re-flex-row-center">
+    <div class="back-l re-flex-row-center-ai">
+      <icon-left @click="onBack" class="back-ico"/>
+      <span @click="onBack">Back</span>
+    </div>
+    <div class="back-c">{{ props.title }}</div>
+    <div class="back-r"></div>
+
+  </div>
+  <div class="back-space"></div>
 </template>
 
+<script lang="ts" setup name="">
+import {useRouter} from "vue-router";
+
+const props = defineProps({
+  path: {
+    required: false,
+    type: String,
+    default: "",
+  },
+  title: {
+    required: false,
+    type: String,
+    default: "",
+  },
+});
+
+const router = useRouter();
+const onBack = () => {
+  if (props.path) {
+    router.push({path: props.path});
+  } else {
+    router.back();
+  }
+}
+</script>
+
 <style scoped lang="scss">
-	.main-header {
-		width: 100%;
-		height: 50px;
-		position: relative;
-		.ico-back {
-			width: 9px;
-			height: 18px;
-			margin-right: 7px;
-		}
-		.main-back {
-			background-color: transparent;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: auto;
-			height: 100%;
-			font-family: Barlow-Regular, Barlow;
-			font-weight: 400;
-			font-size: 17px;
-			color: #000000;
-			line-height: 1;
-			text-align: left;
-			font-style: normal;
-		}
-	}
-	@media screen and (max-width: 768px) {
-	}
+.back, .back-space {
+  background-color: #0C0D13;
+
+  font-family: Barlow-Regular, Barlow;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 1;
+  text-align: left;
+  font-style: normal;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+}
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  .back-ico {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .back-l {
+    position: absolute;
+    top: auto;
+    left: 10px;
+  }
+  .back-r {
+    position: absolute;
+    top: auto;
+    right: 10px;
+  }
+  .back-c {
+    font-family: Barlow-Bold, Barlow;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1;
+    text-align: center;
+    font-style: normal;
+  }
+}
 </style>

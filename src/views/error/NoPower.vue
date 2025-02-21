@@ -1,19 +1,25 @@
 <template>
-	<div class="text">No Power, click this to <a @click="toHome">Home</a></div>
+  <a-result
+    status="403"
+    subtitle="Access to this resource on the server is denied."
+  >
+    <template #extra>
+      <a-space>
+        <a-button type="primary" @click="toHome">Back</a-button>
+      </a-space>
+    </template>
+  </a-result>
 </template>
 
 <script setup>
-	import { useRouter } from "vue-router";
+import {useRouter} from "vue-router";
 
-	let router = useRouter();
-	const toHome = () => {
-		router.push({ path: "/" });
-	};
+let router = useRouter();
+const toHome = () => {
+  router.push({path: "/"})
+}
 </script>
 
 <style scoped lang="scss">
-	.text {
-		width: 100%;
-		text-align: center;
-	}
+
 </style>

@@ -6,46 +6,32 @@ const util = {};
  * @param opts
  */
 util.isMobile = (opts) => {
-	const mobileRE =
-		/(android|bb\d+|meego).+mobile|armv7l|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series[46]0|samsungbrowser.*mobile|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i;
-	const notMobileRE = /CrOS/;
-	const tabletRE = /android|ipad|playbook|silk/i;
-	if (!opts) opts = {};
-	let ua = opts.ua;
-	if (!ua && typeof navigator !== "undefined") ua = navigator.userAgent;
-	if (ua && ua.headers && typeof ua.headers["user-agent"] === "string") {
-		ua = ua.headers["user-agent"];
-	}
-	if (typeof ua !== "string") return false;
+  const mobileRE =
+    /(android|bb\d+|meego).+mobile|armv7l|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series[46]0|samsungbrowser.*mobile|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i;
+  const notMobileRE = /CrOS/;
+  const tabletRE = /android|ipad|playbook|silk/i;
+  if (!opts) opts = {};
+  let ua = opts.ua;
+  if (!ua && typeof navigator !== "undefined") ua = navigator.userAgent;
+  if (ua && ua.headers && typeof ua.headers["user-agent"] === "string") {
+    ua = ua.headers["user-agent"];
+  }
+  if (typeof ua !== "string") return false;
 
-	let result = (mobileRE.test(ua) && !notMobileRE.test(ua)) || (!!opts.tablet && tabletRE.test(ua));
+  let result = (mobileRE.test(ua) && !notMobileRE.test(ua)) || (!!opts.tablet && tabletRE.test(ua));
 
-	if (!result && opts.tablet && opts.featureDetect && navigator && navigator.maxTouchPoints > 1 && ua.indexOf("Macintosh") !== -1 && ua.indexOf("Safari") !== -1) {
-		result = true;
-	}
-	return result;
+  if (!result && opts.tablet && opts.featureDetect && navigator && navigator.maxTouchPoints > 1 && ua.indexOf("Macintosh") !== -1 && ua.indexOf("Safari") !== -1) {
+    result = true;
+  }
+  return result;
 };
 /**
  * 判断微信
  */
 util.isWeixin = () => {
-	const ua = navigator.userAgent.toLowerCase();
-	// @ts-ignore
-	return ua.match(/MicroMessenger/i) === "micromessenger";
-};
-/**
- * 判断是否登录
- * @returns {boolean}
- */
-util.isLogin = () => {
-	return !!window.localStorage.getItem("userToken");
-};
-/**
- * 判断是否登录
- * @returns {boolean}
- */
-util.logout = () => {
-	window.localStorage.removeItem("userToken");
+  const ua = navigator.userAgent.toLowerCase();
+  // @ts-ignore
+  return ua.match(/MicroMessenger/i) === "micromessenger";
 };
 
 export default util;

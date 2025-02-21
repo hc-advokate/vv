@@ -1,0 +1,94 @@
+// 间距
+.com-plr {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.com-mt-10 {
+  margin-top: 10px;
+}
+.com-mt-20 {
+  margin-top: 20px;
+}
+.com-mt-30 {
+  margin-top: 30px;
+}
+.com-mt-40 {
+  margin-top: 40px;
+}
+// 背景及间距
+.com-body {
+  background-color: #0C0D13;
+  min-height: 100vh;
+}
+.com-container {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+// 字体
+.com-font-title {
+  font-size: 30px;
+  line-height: 1;
+}
+.com-font-title-sub {
+  font-size: 20px;
+  line-height: 1;
+}
+.com-font-text {
+  font-size: 16px;
+  line-height: 1;
+}
+.com-font-btn {
+  font-size: 20px;
+  line-height: 1;
+}
+// 列表
+.com-item {
+  display: flex;
+  display: -webkit-flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  .ci-l {
+    display: flex;
+    display: -webkit-flex;
+  }
+  .ci-r {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cil-img {
+    width: 50px;
+  }
+  .cil-ico {
+    width: 25px;
+  }
+  .cil-text {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    .text-name {
+      font-family: Barlow-Regular, Barlow;
+      font-weight: 400;
+      font-size: 16px;
+      color: #FFFFFF;
+      line-height: 1;
+      text-align: left;
+      font-style: normal;
+    }
+    .text-num {
+      font-family: Barlow-Bold, Barlow;
+      font-weight: bold;
+      font-size: 20px;
+      color: #7DF5FA;
+      line-height: 1;
+      text-align: left;
+      font-style: normal;
+    }
+  }
+}
