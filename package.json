@@ -61,5 +61,21 @@
     "unplugin-vue-components": "^28.0.0",
     "vite": "^6.1.0",
     "vite-plugin-compression": "^0.5.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "bigint-buffer",
+      "blake-hash",
+      "bufferutil",
+      "core-js",
+      "esbuild",
+      "keccak",
+      "protobufjs",
+      "tiny-secp256k1",
+      "usb",
+      "utf-8-validate",
+      "vue-demi"
+    ]
   }
 }
