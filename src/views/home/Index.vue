@@ -1,10 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-	<van-cell-group>
-		<van-cell title="单元格" value="内容" />
-		<van-cell title="单元格" value="内容" label="描述信息" />
-	</van-cell-group>
+	<div class="text">ABC</div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+	.text {
+		font-family: Inter-Black, Inter;
+		font-weight: 900;
+		font-size: 46px;
+		line-height: 1.304;
+		font-style: normal;
+		text-align: center;
+	}
+</style>

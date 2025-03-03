@@ -1,15 +1,20 @@
+import { fileURLToPath, URL } from "node:url";
+import path from "node:path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "node:path";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import vueDevTools from "vite-plugin-vue-devtools";
 import viteCompression from "vite-plugin-compression";
 import autoImport from "unplugin-auto-import/vite";
 import components from "unplugin-vue-components/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { ElementPlusResolver, VantResolver } from "unplugin-vue-components/resolvers";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
 	plugins: [
 		vue(),
+		vueJsx(),
+		vueDevTools(),
 		viteCompression({
 			verbose: true,
 			disable: false,
@@ -28,11 +33,11 @@ export default defineConfig({
 			imports: ["vue", "vue-router", "pinia", "@vueuse/head", "@vueuse/core", "vue-i18n"],
 			dirs: ["./hooks", "./hooks/**", "./components", "./components/**"],
 			dts: true,
-			resolvers: [ElementPlusResolver()],
+			resolvers: [ElementPlusResolver(), VantResolver()],
 		}),
 		components({
 			dts: true,
-			resolvers: [ElementPlusResolver()],
+			resolvers: [ElementPlusResolver(), VantResolver()],
 			directoryAsNamespace: true,
 		}),
 	],
@@ -83,8 +88,8 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			"@": path.resolve(__dirname, "./src"),
-			"#": path.resolve(__dirname, "./types"),
+			"@": fileURLToPath(new URL("./src", import.meta.url)),
+			"#": fileURLToPath(new URL("./types", import.meta.url)),
 		},
 	},
 	server: {

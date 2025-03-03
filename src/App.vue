@@ -1,11 +1,3 @@
-<template>
-	<router-view v-slot="{ Component }" :key="$route.fullPath">
-		<keep-alive>
-			<component :is="Component" />
-		</keep-alive>
-	</router-view>
-</template>
-
 <script setup>
 	import WOW from "wow.js";
 
@@ -21,5 +13,13 @@
 		});
 	});
 </script>
+
+<template>
+	<router-view v-slot="{ Component }" :key="$route.fullPath">
+		<keep-alive>
+			<component :is="Component" />
+		</keep-alive>
+	</router-view>
+</template>
 
 <style scoped lang="scss"></style>

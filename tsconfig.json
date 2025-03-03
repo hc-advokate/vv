@@ -1,51 +1,62 @@
 {
-  /* Visit https://aka.ms/tsconfig.json to read more about this file */
-  "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "lib": [
-      "es5",
-      "es6",
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
-    "skipLibCheck": true,
-
-    "forceConsistentCasingInFileNames": true,
-    "strictFunctionTypes": false,
-    "allowJs": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "incremental": false,
-    "noLib": false,
-    //    "jsx": "preserve",
-    "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "types": [
-      "vite/client"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "/@/*": ["src/*"],
-      "/#/*": ["class/*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
     },
-    "noImplicitAny": false,
-    "removeComments": true
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+  "target": "esnext",
+  "useDefineForClassFields": true,
+  "module": "esnext",
+  "moduleResolution": "Node",
+  "strict": true,
+  "jsx": "preserve",
+  "sourceMap": true,
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "esModuleInterop": true,
+  "lib": [
+    "es5",
+    "es6",
+    "esnext",
+    "dom",
+    "dom.iterable",
+    "scripthost"
+  ],
+  "skipLibCheck": true,
+
+  "forceConsistentCasingInFileNames": true,
+  "strictFunctionTypes": false,
+  "allowJs": true,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "experimentalDecorators": true,
+  "incremental": false,
+  "noLib": false,
+  //    "jsx": "preserve",
+  "importHelpers": true,
+  "allowSyntheticDefaultImports": true,
+  "baseUrl": ".",
+  "types": [
+    "vite/client"
+  ],
+  "paths": {
+    "@/*": [
+      "src/*"
+    ],
+    "/@/*": ["src/*"],
+    "/#/*": ["class/*"]
   },
+  "noImplicitAny": false,
+  "removeComments": true
+},
   "plugins": [],
   "include": [
     "src/**/*",
@@ -60,6 +71,5 @@
     "node_modules",
     "dist",
     "tests"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }

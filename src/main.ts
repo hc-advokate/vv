@@ -28,10 +28,8 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 import "element-plus/dist/index.css";
 
-import Vant from "vant";
 // vant
 import "vant/lib/index.css";
-app.use(Vant);
 
 import "animate.css/animate.min.css";
 import "animate.css/animate.compat.css";
