@@ -31,7 +31,7 @@
     "scripthost"
   ],
   "skipLibCheck": true,
-  "downlevelIteration": true
+  "downlevelIteration": true,
   "forceConsistentCasingInFileNames": true,
   "strictFunctionTypes": false,
   "allowJs": true,
