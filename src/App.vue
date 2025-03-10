@@ -66,7 +66,7 @@
 </script>
 
 <template>
-	<router-view v-slot="{ Component }" :key="$route.fullPath">
+	<router-view v-slot="{ Component }" :key="$route.fullPath" v-if="isLoadFontAll">
 		<keep-alive>
 			<component :is="Component" />
 		</keep-alive>
