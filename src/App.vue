@@ -8,42 +8,42 @@
 	const data = reactive({
 		isLoadFont: [false, false],
 	});
-	const font1 = new FontFaceObserver("Inter-Black");
-	const font2 = new FontFaceObserver("Dreamscape");
-	const font3 = new FontFaceObserver("SFPro");
+	const font1 = new FontFaceObserver("TRENDS");
+	const font2 = new FontFaceObserver("TRENDS");
+	const font3 = new FontFaceObserver("TRENDS");
 	onMounted(() => {
 		font1
 			.load()
 			.then(() => {
-				console.log("Inter-Black字体已成功加载！");
+				console.log("1 字体已成功加载！");
 				isLoadFont.value = true;
 				data.isLoadFont[0] = true;
 			})
 			.catch(() => {
-				console.log("Inter-Black字体加载失败。");
+				console.log("1 字体加载失败。");
 				isLoadFont.value = true;
 				data.isLoadFont[0] = true;
 			});
 		font2
 			.load()
 			.then(() => {
-				console.log("Dreamscape字体已成功加载！");
+				console.log("2 字体已成功加载！");
 				isLoadFont.value = true;
 				data.isLoadFont[1] = true;
 			})
 			.catch(() => {
-				console.log("Dreamscape字体加载失败。");
+				console.log("2 字体加载失败。");
 				isLoadFont.value = true;
 				data.isLoadFont[1] = true;
 			});
 		font3
 			.load()
 			.then(() => {
-				console.log("字体已成功加载！");
+				console.log("3 字体已成功加载！");
 				isLoadFont.value = true;
 			})
 			.catch(() => {
-				console.log("字体加载失败。");
+				console.log("3 字体加载失败。");
 				isLoadFont.value = true;
 			});
 	});
