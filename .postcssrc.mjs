@@ -7,7 +7,7 @@ export default {
 			grid: false,
 		},
 		"postcss-pxtorem": {
-			rootValue: 37.5,
+			rootValue: 78,
 			unitPrecision: 5,
 			propList: ["*"],
 			selectorBlackList: ["ignore"],

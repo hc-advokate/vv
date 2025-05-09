@@ -8,42 +8,42 @@
 	const data = reactive({
 		isLoadFont: [false, false],
 	});
-	const font1 = new FontFaceObserver("Inter-Black");
-	const font2 = new FontFaceObserver("Dreamscape");
-	const font3 = new FontFaceObserver("SFPro");
+	const font1 = new FontFaceObserver("RobotoSerif");
+	const font2 = new FontFaceObserver("SourceHanSans");
+	const font3 = new FontFaceObserver("HelveticaNeue");
 	onMounted(() => {
 		font1
 			.load()
 			.then(() => {
-				console.log("Inter-Black字体已成功加载！");
+				console.log("RobotoSerif 字体已成功加载！");
 				isLoadFont.value = true;
 				data.isLoadFont[0] = true;
 			})
 			.catch(() => {
-				console.log("Inter-Black字体加载失败。");
+				console.log("RobotoSerif 字体加载失败。");
 				isLoadFont.value = true;
 				data.isLoadFont[0] = true;
 			});
 		font2
 			.load()
 			.then(() => {
-				console.log("Dreamscape字体已成功加载！");
+				console.log("SourceHanSans 字体已成功加载！");
 				isLoadFont.value = true;
 				data.isLoadFont[1] = true;
 			})
 			.catch(() => {
-				console.log("Dreamscape字体加载失败。");
+				console.log("SourceHanSans 字体加载失败。");
 				isLoadFont.value = true;
 				data.isLoadFont[1] = true;
 			});
 		font3
 			.load()
 			.then(() => {
-				console.log("字体已成功加载！");
+				console.log("HelveticaNeue 字体已成功加载！");
 				isLoadFont.value = true;
 			})
 			.catch(() => {
-				console.log("字体加载失败。");
+				console.log("HelveticaNeue 字体加载失败。");
 				isLoadFont.value = true;
 			});
 	});
