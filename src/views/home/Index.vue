@@ -46,7 +46,13 @@
 				<img class="re-t-cp c2-img2" :src="IcoImg2" alt="" />
 			</div>
 		</div>
-		<div class="footer"></div>
+		<div class="com-p_lr footer">
+			<div class="re-flex-row">
+				<h4 class="f-title">Get in Touch</h4>
+				<button class="f-btn re-t-cp">CONTACT US</button>
+			</div>
+			<img class="re-t-cp f-img" :src="Logo" alt="" />
+		</div>
 	</section>
 </template>
 
@@ -67,6 +73,7 @@
 		}
 	}
 	.banner {
+		height: auto;
 		position: relative;
 		z-index: 1;
 		.b-bg {
@@ -104,7 +111,9 @@
 	.content-2 {
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000300 7%, #000200 100%);
+		//background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000300 7%, #000200 100%);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, #000300 7%, #000200 100%);
+		padding-bottom: 60px;
 		.c2-ct {
 			display: flex;
 			position: relative;
@@ -166,6 +175,40 @@
 			width: 100%;
 			height: 1px;
 			background: rgba(167, 239, 0, 1);
+		}
+	}
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: #005500;
+		padding-top: 64px;
+		padding-bottom: 64px;
+		.f-title {
+			font-family: TRENDS;
+			font-size: 28px;
+			color: #ffffff;
+			line-height: 1;
+			text-align: left;
+			font-style: normal;
+		}
+		.f-btn {
+			width: 98px;
+			height: 28px;
+			background: #a7ef00;
+			border-radius: 3px;
+			margin-left: 8px;
+			font-family: SFPro-Regular, SFPro;
+			font-weight: 400;
+			font-size: 12px;
+			color: #000300;
+			line-height: 1;
+			text-align: center;
+			font-style: normal;
+		}
+		.f-img {
+			width: 144px;
+			height: 49px;
 		}
 	}
 </style>
