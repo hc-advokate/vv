@@ -5,12 +5,13 @@
 	import { reactive, ref } from "vue";
 
 	const modules = [Navigation];
+	const swiperObj = ref(null);
 
 	const onSwiper = (swiper) => {
-		console.log(swiper);
+		swiperObj.value = swiper;
 	};
-	const onSlideChange = () => {
-		console.log("slide change");
+	const onChangeSw = () => {
+		swiperObj.value.slideTo(3);
 	};
 </script>
 
@@ -22,11 +23,11 @@
 		</video>
 		<div class="h-body">
 			<div class="re-flex-row-between h-header">
-				<img class="hb-logo" :src="Constants.logo" alt="" />
-				<img class="hb-menu" :src="Constants.ico.menu" alt="" />
+				<img class="re-t-cp hb-logo" :src="Constants.logo" alt="" />
+				<img class="re-t-cp hb-menu" :src="Constants.ico.menu" alt="" />
 			</div>
 			<div class="h-contant">
-				<swiper navigation :modules="modules" :slides-per-view="1" @swiper="onSwiper" @slideChange="onSlideChange" class="h-list">
+				<swiper navigation :modules="modules" :slides-per-view="1" @swiper="onSwiper" class="h-list">
 					<swiper-slide class="h-item hc-1">
 						<div class="re-flex-row-center">
 							<img class="c1-img" :src="Constants.home.img1" alt="" />
@@ -36,12 +37,12 @@
 						</div>
 						<h1 class="gradient-txt c1-title">Building Legacies, Together</h1>
 						<div class="c1-line"></div>
-						<p class="c1-desc"
-							>At Adelson Ventures, we invest in startups reshaping industries. If you’re building the future of technology, sustainability, or financial innovation, let’s partner for exponential
-							growth."</p
-						>
+						<p class="c1-desc">
+							At Adelson Ventures, we invest in startups reshaping industries. If you’re building the future of technology, sustainability, or financial innovation, let’s partner for exponential
+							growth."
+						</p>
 						<div class="re-flex-row-center">
-							<button class="re-flex-row-center c1-btn">
+							<button class="re-t-cp re-flex-row-center c1-btn" @click="onChangeSw">
 								<span>Explore Opportunities</span>
 								<img class="btn-ico" :src="Constants.ico.dctRight" alt="" />
 							</button>
@@ -72,17 +73,17 @@
 							<div class="form-item re-flex-row-center-ai" ref="name">
 								<label id="name">Name</label>
 								<div class="form-in re-flex-row">
-									<div class="gradient-input form-in_half">
+									<div class="gradient-input form-in_half form-in_input">
 										<input class="input-sty" placeholder="First Name" />
 									</div>
-									<div class="gradient-input form-in_half">
+									<div class="gradient-input form-in_half form-in_input">
 										<input class="input-sty" placeholder="Last Name" />
 									</div>
 								</div>
 							</div>
 							<div class="form-item re-flex-row-center-ai" ref="email">
 								<label id="email">Email</label>
-								<div class="gradient-input form-in">
+								<div class="gradient-input form-in form-in_input">
 									<input class="input-sty" placeholder="" />
 								</div>
 							</div>
@@ -326,6 +327,9 @@
 				}
 				.form-textarea {
 					height: 56px;
+				}
+				.form-in_input {
+					//height: 16px;
 				}
 				.input-sty {
 					width: 100%;
