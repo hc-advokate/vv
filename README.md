@@ -1,18 +1,5 @@
-vite vue vue-router pinia axios
+# Vue 3 + Vite
 
--D vite-plugin-pwa unplugin-icons unplugin-auto-import unplugin-vue-components
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-unplugin-vue-i18n vite-plugin-i18n-resources vite-plugin-i18n-autoimport
-
-vite-plugin-mock-server
-
-dev https
-vite-plugin-mkcert
-
-vite-plugin-px-rem-vw vite-plugin-style-vw-loader
-
-vite-svg-loader unplugin-svg-component @spiriit/vite-plugin-svg-spritemap
-
-vite-plugin-env-switch
-
-vite-plugin-auto-mpa-html vite-plugin-multi-page vite-plugin-multi-pages vite-plugin-mpa-plus
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
